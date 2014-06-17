@@ -6,6 +6,15 @@ gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
+
+gem 'libv8'#, '3.16.14.3'
+
+gem 'therubyracer', '0.11.0beta1'
+
+gem 'less-rails'
+
+gem 'twitter-bootstrap-rails'
+
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

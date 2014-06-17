@@ -19,7 +19,7 @@ default: &default
   encoding: UTF8
   database: photo_blog
   username: postgres
-  password: rubypw
+  password: master
   host: localhost
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling

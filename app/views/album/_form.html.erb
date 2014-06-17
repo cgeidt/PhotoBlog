@@ -1,0 +1,13 @@
+<%= form_for(:album) do |f| %>
+
+    <h2>Album</h2>
+        <p>
+          <strong>Title:</strong>
+          <%= f.text_field :title%>
+        </p>
+        <p>
+          <strong>Description:</strong>
+          <%= f.text_area :description %>
+        </p>
+    <%= f.submit %>
+<% end %>
