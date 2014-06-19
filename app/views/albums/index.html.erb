@@ -1,6 +1,11 @@
 <h1>Albums</h1>
 
 <table class="table">
+  <colgroup>
+    <col width="20%">
+    <col width="50%">
+    <col width="20%">
+  </colgroup>
   <thead>
   <tr>
     <th>Title</th>
@@ -12,20 +17,17 @@
   <% @albums.each do |album| %>
       <tr>
         <td><%= album.title %></td>
-        <td><%= album.description.truncate(15) %></td>
+        <td><%= album.description.truncate(50) %></td>
         <td>
           <%= link_to "View", album_path(album), class: 'btn btn-success' %>
-
           <%= link_to "Edit", edit_album_path(album), class: 'btn btn-info' %>
-
-          <%= link_to "Destroy", album_path(album), class: 'btn btn-danger', method: :delete, confirm: "Are you sure?" %>
-
+          <%= link_to "Delete", album_path(album), class: 'btn btn-danger', method: :delete, confirm: "Are you sure?" %>
         </td>
       </tr>
   <% end %>
   </tbody>
 </table>
-
+<br/>
 <%= link_to "New album", new_album_path, class: 'btn btn-success' %>
-
-<%= link_to "Welcome screen", welcome_index_path, class: 'btn btn-success' %>
+<br/>
+<%= link_to "To welcome screen", welcome_index_path, class: 'btn btn-success' %>
