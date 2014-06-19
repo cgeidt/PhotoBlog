@@ -6,7 +6,6 @@ class AlbumsController < ApplicationController
 
   def create
     @album = Album.new(album_params)
-
     if @album.save then
       redirect_to @album
     else
@@ -19,12 +18,16 @@ class AlbumsController < ApplicationController
   end
 
   def update
+    @album = Album.find(params[:id])
+    @album.update_attributes(album_params)
+    @album.save!
+    redirect_to @album
   end
 
-  def delete
+  def destroy
     @album = Album.find(params[:id])
     @album.destroy
-    redirect_to articles_path
+    redirect_to albums_path
   end
 
   def index
