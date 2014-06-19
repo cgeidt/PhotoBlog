@@ -7,9 +7,7 @@ gem 'pg'
 # Gem for twitter-bootstrap
 gem 'bootstrap-sass', '~> 3.1.1'
 
-gem 'therubyracer', '0.11.0beta1'
-
-gem 'less-rails'
+gem 'libv8', '3.16.14.3'
 
 gem 'twitter-bootstrap-rails'
 
