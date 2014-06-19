@@ -49,9 +49,10 @@
           <a class="brand" href="#">PhotoBlog</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Albums", albums_path  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= nav_link "Home", welcome_index_path  %></li>
+              <li><%= nav_link "Albums", albums_path  %></li>
+              <li><%= nav_link "Link2", "/path2"  %></li>
+              <li><%= nav_link "Link3", "/path3"  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
