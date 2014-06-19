@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20140612095828) do
     t.datetime "updated_at"
   end
 
-  add_index "photos", ["album_id"], name: "index_photos_on_album_id", using: :btree
+  add_index "photos", ["album_id"], name: "index_photos_on_album_id", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
