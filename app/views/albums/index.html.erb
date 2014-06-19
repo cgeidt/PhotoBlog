@@ -1,5 +1,7 @@
 <h1>Albums</h1>
-
+<br/>
+<%= link_to "New album", new_album_path, class: 'btn btn-success' %>
+<br/><br/>
 <table class="table">
   <colgroup>
     <col width="20%">
@@ -27,7 +29,5 @@
   <% end %>
   </tbody>
 </table>
-<br/>
-<%= link_to "New album", new_album_path, class: 'btn btn-success' %>
 <br/>
 <%= link_to "To home screen", welcome_index_path, class: 'btn btn-success' %>
