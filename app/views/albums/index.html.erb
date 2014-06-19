@@ -1,2 +1,31 @@
-<h1>Album#index</h1>
-<p>Find me in app/views/album/index.html.erb</p>
+<h1>Albums</h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @albums.each do |album| %>
+      <tr>
+        <td><%= album.title %></td>
+        <td><%= album.description.truncate(15) %></td>
+        <td>
+          <%= link_to "View", album_path(album), class: 'btn btn-success' %>
+
+          <%= link_to "Edit", edit_album_path(album), class: 'btn btn-info' %>
+
+          <%= link_to "Destroy", album_path(album), class: 'btn btn-danger', method: :delete, confirm: "Are you sure?" %>
+
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New album", new_album_path, class: 'btn btn-success' %>
+
+<%= link_to "Welcome screen", welcome_index_path, class: 'btn btn-success' %>
