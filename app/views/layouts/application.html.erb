@@ -49,10 +49,20 @@
           <a class="brand" href="#">PhotoBlog</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= nav_link "Home", welcome_index_path  %></li>
-              <li><%= nav_link "Albums", albums_path  %></li>
-              <li><%= nav_link "Link2", "/path2"  %></li>
-              <li><%= nav_link "Link3", "/path3"  %></li>
+              <li class="<%= is_active?(welcome_index_path) %>"><%= link_to "Home", welcome_index_path %></li>
+              <li class="<%= is_active?(albums_path) %>"><%= link_to "Albums", albums_path%></li>
+              <li><%= link_to "Link2", "/path2"  %></li>
+              <li><%= link_to "Link3", "/path3"  %></li>
+            </ul>
+            <ul class="nav" style="float:right">
+                <% if user_signed_in? %>
+                    Logged in as <strong><%= current_user.email %></strong>.
+                  <li><%= link_to 'Edit profile'%></li>
+                  <li><%= link_to "Logout"%></li>
+                <% else %>
+                  <li><%= link_to "Sign up"%></li>
+                  <li><%= link_to "Login"%></li>
+                <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -73,12 +83,18 @@
         </div><!--/span-->
         <div class="span9">
           <%= bootstrap_flash %>
+          <% if notice %>
+              <p class="alert alert-success"><%= notice %></p>
+          <% end %>
+          <% if alert %>
+              <p class="alert alert-danger"><%= alert %></p>
+          <% end %>
           <%= yield %>
         </div>
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2014</p>
+        <p>&copy; C. Geidt & S. Schultheiss</p>
       </footer>
 
     </div> <!-- /container -->
