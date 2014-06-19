@@ -1,0 +1,9 @@
+<h1># # #  Photoblog  # # #</h1>
+
+<% @albums.each do |album| %>
+    <h2><%= album.title %></h2>
+    <p>
+      <%= album.description %>
+    </p>
+    <%= link_to 'Mehr', article %>
+<% end %>

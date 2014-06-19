@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
-  root 'album#new'
+  #root 'album#new'
+  get "welcome/index"
+  # You can have the root of your site routed with "root"
+  root 'welcome#index'
 
-  resources :album do
-    resources :photo
+  resources :albums do
+    resources :photos
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
