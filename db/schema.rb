@@ -27,8 +27,11 @@ ActiveRecord::Schema.define(version: 20140612095828) do
     t.string   "url"
     t.string   "title"
     t.string   "description"
+    t.integer  "album_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "photos", ["album_id"], name: "index_photos_on_album_id", using: :btree
 
 end
