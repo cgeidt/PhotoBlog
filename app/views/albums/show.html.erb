@@ -1,10 +1,18 @@
 <h1>
   <%= @album.title %>
 </h1>
-
 <p>
   <%= @album.description %>
 </p>
+<br/>
+
+<ul class="list-group">
+  <%= render @album.photos %>
+</ul>
+
+<h2>New photo</h2>
+<%= render 'photos/form' %>
+
 <br/>
 <%= link_to "Back to albums", albums_path, class: 'btn btn-info' %>
 <br/>
