@@ -1,5 +1,6 @@
 class AlbumsController < ApplicationController
 
+  # before_action :authenticate_user!, except: [:show]
   before_action :load_photos, only: [:new, :edit]
 
   def new

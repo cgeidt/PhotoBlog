@@ -50,6 +50,7 @@ GEM
     execjs (2.2.0)
     hike (1.2.3)
     i18n (0.6.9)
+    imagemagick-identify (0.0.1)
     jbuilder (2.1.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -137,6 +138,7 @@ DEPENDENCIES
   bootstrap_form
   coffee-rails (~> 4.0.0)
   devise
+  imagemagick-identify
   jbuilder (~> 2.0)
   jquery-rails
   libv8 (= 3.16.14.3)

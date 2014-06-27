@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
 
   def new
+    @photo = Photo.new
   end
 
   def create
@@ -24,7 +25,6 @@ class PhotosController < ApplicationController
 
   def index
   end
-
 
 
   private

@@ -12,6 +12,10 @@ gem 'libv8', '3.16.14.3'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
 gem 'sass-rails', '~> 4.0.3'
+
+# Fixes "undefined method `photos' for nil:NilClass" Error
+gem 'imagemagick-identify'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
