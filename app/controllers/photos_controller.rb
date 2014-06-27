@@ -5,7 +5,7 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @album = Album.find(params[:album_id])
+    @album = Album.find(params[:id])
     @photo = @album.photos.create(photo_params)
     redirect_to album_path(@album)
   end
@@ -24,6 +24,12 @@ class PhotosController < ApplicationController
   end
 
   def index
+  end
+
+  def show
+    @album = Album.find(params[:id])
+    @photo = @album.photos.find(params[:id])
+    # @photo = Album.find(params[:id]).photos.find(params[:id])
   end
 
 

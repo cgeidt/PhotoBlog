@@ -6,10 +6,9 @@
     <%= photo.url %>
   </p>
 
-  <p>
-  <%= link_to 'Delete photo', [photo.album, photo],
-  	 class: 'btn btn-danger',
-     method: :delete,
-     data: { confirm: 'Are you sure?' } %>
-	</p>
+  <%= link_to 'Mehr', album_photo_path(album_id: @album.id) %>
+
+  <br/><br/>
+
+  <%= link_to 'Delete photo', [photo.album, photo], method: :delete, data: { confirm: 'Are you sure?' } %>
 </li>
