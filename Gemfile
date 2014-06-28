@@ -13,8 +13,8 @@ gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
 gem 'sass-rails', '~> 4.0.3'
 
-# Fixes "undefined method `photos' for nil:NilClass" Error
-gem 'imagemagick-identify'
+# For image display
+gem 'carrierwave'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

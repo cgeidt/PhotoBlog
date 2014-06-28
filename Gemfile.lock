@@ -28,11 +28,17 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bcrypt (3.1.7)
     bcrypt (3.1.7-x86-mingw32)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     bootstrap_form (2.1.1)
     builder (3.2.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -50,7 +56,6 @@ GEM
     execjs (2.2.0)
     hike (1.2.3)
     i18n (0.6.9)
-    imagemagick-identify (0.0.1)
     jbuilder (2.1.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -66,6 +71,7 @@ GEM
     minitest (5.3.5)
     multi_json (1.10.1)
     orm_adapter (0.5.0)
+    pg (0.17.1)
     pg (0.17.1-x86-mingw32)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -136,9 +142,9 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.1.1)
   bootstrap_form
+  carrierwave
   coffee-rails (~> 4.0.0)
   devise
-  imagemagick-identify
   jbuilder (~> 2.0)
   jquery-rails
   libv8 (= 3.16.14.3)

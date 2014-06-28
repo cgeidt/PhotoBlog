@@ -12,22 +12,14 @@
 
 <br/><br/>
 
-<%= link_to "Back to albums", albums_path, class: 'btn btn-info' %>
-<%= link_to "To home screen", welcome_index_path, class: 'btn btn-success' %>
+<%= link_to "<= Back", albums_path, class: 'btn btn-info' %>
+<%= link_to "To home screen", welcome_index_path, class: 'btn btn-info' %>
 
 <br/><br/>
 <br/><br/>
 
-<h4>New photo</h4>
-<%= render 'photos/form' %>
-
-<br/><br/>
-
-<!-- verschiedene Versionen -->
 <br/>
-<%= link_to "Add new photo (Version 1) (funktioniert nicht)", new_album_photo_path(album_id: @album.id), class: 'btn' %>
+<%= link_to "Add new photo (Version 1)", [@album, @album.photos.new], method: :new, class: 'btn' %>
 <br/>
-<%= link_to "Add new photo (Version 2) (funktioniert nicht)", new_album_photo_path(:album_id=>@album.id), class: 'btn' %>
-<br/>
-<%= link_to "Add new photo (Version 3) (funktioniert nicht)", url_for(action: :new), class: 'btn' %>
+<%= link_to "Add new photo (Version 2)", new_album_photo_path(@album, @photo), class: 'btn' %>
 <br/>

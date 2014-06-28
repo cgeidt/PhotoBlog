@@ -1,8 +1,5 @@
 class AlbumsController < ApplicationController
 
-  # before_action :authenticate_user!, except: [:show]
-  before_action :load_photos, only: [:new, :edit]
-
   def new
     @album = Album.new
   end
@@ -45,10 +42,6 @@ class AlbumsController < ApplicationController
 
   def album_params
     params.require(:album).permit(:title, :description)
-  end
-
-  def load_photos
-    @photos = Photo.all
   end
 
 end

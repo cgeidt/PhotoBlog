@@ -1,3 +1,25 @@
-<h1>Show photo</h1>
+<h1>
+  <%= @photo.title %>
+</h1>
+<p>
+  <%= @photo.description %>
+</p>
+<p>
+  <%= @photo.url %>
+</p>
 <br/>
-<%= render partial: 'form' %>
+
+<%= link_to "Edit", edit_album_photo_path(@album, @photo), class: 'btn btn-warning' %>
+
+<br/>
+
+<ul class="list-group">
+  <%= render @photo.comments %>
+</ul>
+
+<br/><br/>
+
+<%= link_to "<= Back", album_path(@photo.album), class: 'btn btn-info' %>
+<%= link_to "To home screen", welcome_index_path, class: 'btn btn-info' %>
+
+<br/><br/>
