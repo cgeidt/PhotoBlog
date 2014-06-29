@@ -7,19 +7,26 @@
 <p>
   <%= @photo.url %>
 </p>
+<p>
+  <%= @photo.filename %>
+</p>
 <br/>
-
-<%= link_to "Edit", edit_album_photo_path(@album, @photo), class: 'btn btn-warning' %>
-
-<br/>
-
-<ul class="list-group">
-  <%= render @photo.comments %>
-</ul>
-
-<br/><br/>
 
 <%= link_to "<= Back", album_path(@photo.album), class: 'btn btn-info' %>
 <%= link_to "To home screen", welcome_index_path, class: 'btn btn-info' %>
+<%= link_to "Edit", edit_album_photo_path(@album, @photo), class: 'btn btn-warning' %>
+<br/>
+<br/>
 
-<br/><br/>
+<%= image_tag @photo.filename,:border=>0 %>
+<br/>
+
+<br/>
+<h3>Kommentare</h3>
+<ul class="list-group">
+  <%= render @photo.comments %>
+</ul>
+<br/>
+
+<h4>New Comment</h4>
+<%= render 'comments/form' %>

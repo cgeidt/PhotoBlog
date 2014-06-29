@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   #root 'albums#new'
 
   resources :albums do
-    resources :photos
+    resources :photos do
+      resources :comments
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

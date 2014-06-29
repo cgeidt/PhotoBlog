@@ -13,8 +13,11 @@ gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
 gem 'sass-rails', '~> 4.0.3'
 
-# For image display
+# For file upload
 gem 'carrierwave'
+
+# For image display
+#gem 'mini_magick'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

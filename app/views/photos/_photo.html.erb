@@ -4,6 +4,11 @@
     <%= photo.description %>
     <br/>
     <%= photo.url %>
+    <br/>
+    <%= photo.filename %>
+    <br/>
+    <%= link_to image_tag(photo.filename,:size=>'320x240',:border=> 0),album_photo_path(photo.album, photo) %>
+    <!-- <%= link_to image_tag(photo.url,:size=>'320x240',:border=> 0,:class=>'list_image'),album_photo_path(photo.album, photo) %> -->
   </p>
 
   <p>
