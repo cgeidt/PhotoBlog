@@ -1,14 +1,15 @@
 <li class="list-group-item active">	  
   <h4 class="list-group-item-heading"><%= photo.title %></h4>
   <p class="list-group-item-text">
-    <%= photo.description %>
-    <br/>
-    <%= photo.url %>
-    <br/>
-    <%= photo.filename %>
-    <br/>
-    <%= link_to image_tag(photo.filename,:size=>'320x240',:border=> 0),album_photo_path(photo.album, photo) %>
-    <!-- <%= link_to image_tag(photo.url,:size=>'320x240',:border=> 0,:class=>'list_image'),album_photo_path(photo.album, photo) %> -->
+    <p>
+      <%= photo.description %>
+    </p>
+    <p>
+      <%= link_to image_tag(photo.filename,:size=>'320x240',:border=> 0),album_photo_path(photo.album, photo) %>
+      <p>
+        &nbsp;url:&nbsp;<%= photo.url %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filename:&nbsp;<%= photo.filename %>&nbsp;
+      </p>
+    </p>
   </p>
 
   <p>

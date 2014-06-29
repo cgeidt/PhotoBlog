@@ -1,5 +1,5 @@
 <%= bootstrap_form_for([@album,@photo,@photo.comments.build]) do |f| %>
     <%= f.text_field :commenter %>
     <%= f.text_area :body %>
-    <%= f.submit class: 'btn btn-success' %>
+    <%= f.submit class: 'btn btn-small btn-success' %>
 <% end %>

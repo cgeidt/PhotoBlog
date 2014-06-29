@@ -6,16 +6,14 @@
 </p>
 <br/>
 
-<%= link_to "<= Back", albums_path, class: 'btn btn-info' %>
-<%= link_to "To home screen", welcome_index_path, class: 'btn btn-info' %>
+<%= link_to "<= Back", albums_path, class: 'btn btn-small btn-info' %>
+<%= link_to "To home screen", welcome_index_path, class: 'btn btn-small btn-info' %>
+<%= link_to "+ Add new photo", new_album_photo_path(@album), class: 'btn btn-small' %>
+<br/>
 <br/>
 
-<br/>
+<hr>
 <ul class="list-group">
   <%= render @album.photos %>
 </ul>
-<br/>
-
-<br/>
-<%= link_to "Add new photo", new_album_photo_path(@album), class: 'btn' %>
-<br/>
+<hr>

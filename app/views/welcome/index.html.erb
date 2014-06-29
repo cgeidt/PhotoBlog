@@ -1,10 +1,12 @@
-<h1># # #  Photoblog  # # #</h1>
+<h1><div align="center">Photoblog</div></h1>
 <br/>
-<%= link_to "Show albums", albums_path, class: 'btn btn-info' %>
-<br/><br/>
+<br/>
+<h2>Albums</h2>
+<hr>
+<br/>
 <% @albums.each do |album| %>
     <p>
-      <h2><%= album.title %></h2>
+      <h3><%= album.title %></h3>
         <p>
           <%= album.description %>
         </p>
