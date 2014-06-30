@@ -1,16 +1,14 @@
-<h1>
-  <%= @album.title %>
-</h1>
+<h2><%= @album.title %></h2>
 <p>
   <%= @album.description %>
 </p>
-<br/>
-
-<%= link_to "<= Back", albums_path, class: 'btn btn-small btn-info' %>
-<%= link_to "To home screen", welcome_index_path, class: 'btn btn-small btn-info' %>
-<%= link_to "+ Add new photo", new_album_photo_path(@album), class: 'btn btn-small' %>
-<br/>
-<br/>
+<p>
+  <br/>
+  <%= link_to "<= Back", albums_path, class: 'btn btn-small btn-info' %>
+  <%= link_to "To home screen", welcome_index_path, class: 'btn btn-small btn-info' %>
+  <%= link_to "+ Add new photo", new_album_photo_path(@album), class: 'btn btn-small' %>
+  <br/>
+</p>
 
 <hr>
 <ul class="list-group">

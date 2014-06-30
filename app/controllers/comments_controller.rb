@@ -12,14 +12,16 @@ class CommentsController < ApplicationController
       @album = Album.find(@photo.album_id)
       redirect_to album_photo_path(@album, @photo)
     else
-      #
+      # stay here
     end
   end
 
   def edit
+    # not provided
   end
 
   def update
+    # not provided
   end
 
   def destroy
@@ -31,6 +33,7 @@ class CommentsController < ApplicationController
   end
 
   def index
+    # not provided
   end
 
   def show

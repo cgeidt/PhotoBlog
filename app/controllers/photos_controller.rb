@@ -1,10 +1,10 @@
 class PhotosController < ApplicationController
 
-  def new # NOT WORKING
+  def new
     @album = Album.find(params[:album_id])
   end
 
-  def create # NOT WORKING
+  def create
     @album = Album.find(params[:album_id])
     @photo = @album.photos.create(photo_params)
     if @photo.save then
@@ -35,6 +35,7 @@ class PhotosController < ApplicationController
   end
 
   def index
+    @photos = Photo.all
   end
 
   def show

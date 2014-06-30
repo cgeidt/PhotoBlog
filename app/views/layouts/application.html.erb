@@ -51,8 +51,7 @@
             <ul class="nav">
               <li class="<%= is_active?(welcome_index_path) %>"><%= link_to "Home", welcome_index_path %></li>
               <li class="<%= is_active?(albums_path) %>"><%= link_to "Albums", albums_path%></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li class="<%= is_active?(photos_path) %>"><%= link_to "Photos", photos_path%></li>
             </ul>
             <ul class="nav" style="float:right">
                 <% if user_signed_in? %>
