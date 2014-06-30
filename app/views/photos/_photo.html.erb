@@ -7,7 +7,7 @@
     <p>
       <%= link_to image_tag(photo.filename,:size=>'320x240',:border=> 0),album_photo_path(photo.album, photo) %>
       <p>
-        &nbsp;<%= t('text_url') %>&nbsp;<%= photo.url %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= t('text_filename:') %>&nbsp;<%= photo.filename %>&nbsp;
+        &nbsp;<%= t('text_url') %>&nbsp;<%= photo.url %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= t('text_filename') %>&nbsp;<%= photo.filename %>&nbsp;
       </p>
     </p>
   </p>

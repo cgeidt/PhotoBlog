@@ -63,11 +63,11 @@
                 <li><%= link_to t('login') %></li>
               <% end %>
               <% if I18n.locale == I18n.default_locale %>
-                  <li><%= link_to "DE",:locale=>'de' %></li>
-                  <li><%= link_to image_tag('de.png',:size=>'20x15',:border=> 0),:locale=>'de' %></li>
+                <li><%= link_to "DE",:locale=>'de' %></li>
+                <li><%= link_to image_tag('de.png',:size=>'20x15',:border=> 0),:locale=>'de' %></li>
               <% else %>
-                  <li><%= link_to "EN",:locale=>'en' %></li>
-                  <li><%= link_to image_tag('en.png',:size=>'20x15',:border=> 0),:locale=>'en' %></li>
+                <li><%= link_to "EN",:locale=>'en' %></li>
+                <li><%= link_to image_tag('en.png',:size=>'20x15',:border=> 0),:locale=>'en' %></li>
               <%end%>
             </ul>
           </div><!--/.nav-collapse -->

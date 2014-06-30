@@ -46,6 +46,14 @@ class PhotosController < ApplicationController
 
   private
 
+  def print_photo_params(text)
+    puts "###{text}##photo_params##title:#{photo_params[:title]}#description:#{photo_params[:description]}#url:#{photo_params[:url]}#filename:#{photo_params[:filename]}##"
+  end
+
+  def photo_params_simple
+    params.require(:photo).permit(:title, :description)
+  end
+
   def photo_params
     params.require(:photo).permit(:url, :filename, :title, :description)
   end

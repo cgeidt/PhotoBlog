@@ -16,6 +16,9 @@ gem 'sass-rails', '~> 4.0.3'
 # For file upload
 gem 'carrierwave'
 
+#
+gem 'imagemagick-binaries'
+
 # For image display
 gem 'mini_magick'
 
