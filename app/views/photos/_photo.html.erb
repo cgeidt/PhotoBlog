@@ -7,15 +7,15 @@
     <p>
       <%= link_to image_tag(photo.filename,:size=>'320x240',:border=> 0),album_photo_path(photo.album, photo) %>
       <p>
-        &nbsp;url:&nbsp;<%= photo.url %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filename:&nbsp;<%= photo.filename %>&nbsp;
+        &nbsp;<%= t('text_url') %>&nbsp;<%= photo.url %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= t('text_filename:') %>&nbsp;<%= photo.filename %>&nbsp;
       </p>
     </p>
   </p>
 
   <p>
-    <%= link_to 'Mehr', album_photo_path(photo.album, photo)%>
+    <%= link_to t('more'), album_photo_path(photo.album, photo)%>
     <br/><br/>
-    <%= link_to 'Delete photo', [photo.album, photo], method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to t('delete_photo'),[photo.album,photo],method: :delete,data:{confirm: t('confirm')} %>
   </p>
 
   <br/>

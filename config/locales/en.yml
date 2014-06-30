@@ -20,4 +20,48 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  main_title:     "PhotoBlog"
+  photoblog:      "PhotoBlog"
+  authors:        "C. Geidt & S. Schultheiß"
+
+  title:          "Title"
+  description:    "Description"
+  actions:        "Actions"
+  sidebar:        "Sidebar"
+  to_home:        "To home screen"
+
+  btn_back:       "<= Back"
+  btn_add_photo:  "+ Add new photo"
+
+  albums:         "Albums"
+  album:          "Album"
+  edit_album:     "Edit album"
+  new_album:      "New album"
+  create_album:   "Create new album"
+
+  photos:         "Photos"
+  photo:          "Photo"
+  text_url:       "url:"
+  text_filename:  "filename:"
+  delete_photo:   "Delete photo"
+  edit_photo:     "Edit photo"
+  new_photo:      "New photo"
+
+  comments:       "Comments"
+  comment:        "Comment"
+  new_comment:    "New comment"
+  delete_comment: "Delete comment"
+
+  login:          "Login"
+  logout:         "Logout"
+  sign_up:        "Sign up"
+  edit_profile:   "Edit profile"
+  logged_in:      "Logged in as"
+
+  home:           "Home"
+  more:           "More"
+  show:           "Show"
+  view:           "View"
+  edit:           "Edit"
+  delete:         "Delete"
+  confirm:        "Are you sure?"

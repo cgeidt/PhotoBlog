@@ -12,9 +12,9 @@
 </p>
 <br/>
 
-<%= link_to "<= Back", album_path(@photo.album), class: 'btn btn-small btn-info' %>
-<%= link_to "To home screen", welcome_index_path, class: 'btn btn-small btn-info' %>
-<%= link_to "Edit", edit_album_photo_path(@album, @photo), class: 'btn btn-small btn-warning' %>
+<%= link_to t('btn_back'), album_path(@photo.album), class: 'btn btn-small btn-info' %>
+<%= link_to t('to_home'), welcome_index_path, class: 'btn btn-small btn-info' %>
+<%= link_to t('edit'), edit_album_photo_path(@album, @photo), class: 'btn btn-small btn-warning' %>
 <br/>
 <br/>
 
@@ -22,11 +22,11 @@
 <br/>
 
 <br/>
-<h3>Kommentare</h3>
+<h3><%= t('comments') %></h3>
 <ul class="list-group">
   <%= render @photo.comments %>
 </ul>
 <br/>
 
-<h4>New Comment</h4>
+<h3><%= t('new_comment') %></h3>
 <%= render 'comments/form' %>

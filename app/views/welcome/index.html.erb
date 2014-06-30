@@ -1,7 +1,7 @@
-<h1><div align="center">Photoblog</div></h1>
+<h1><div align="center"><%= t('photoblog') %></div></h1>
 <br/>
 <br/>
-<h2>Albums</h2>
+<h2><%= t('albums') %></h2>
 <hr>
 <br/>
 <% @albums.each do |album| %>
@@ -10,7 +10,7 @@
         <p>
           <%= album.description %>
         </p>
-        <%= link_to 'Mehr', album %>
+        <%= link_to t('more'), album %>
     </p>
     <br/>
 <% end %>
