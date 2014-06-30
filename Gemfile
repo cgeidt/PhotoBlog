@@ -17,7 +17,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'carrierwave'
 
 # For image display
-#gem 'mini_magick'
+gem 'mini_magick'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
