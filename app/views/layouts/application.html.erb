@@ -54,14 +54,21 @@
               <li class="<%= is_active?(photos_path) %>"><%= link_to t('photos'), photos_path%></li>
             </ul>
             <ul class="nav" style="float:right">
-                <% if user_signed_in? %>
-                  <%= t('logged_in') %>&nbsp;<strong><%= current_user.email %></strong>.
-                  <li><%= link_to t('edit_profile')%></li>
-                  <li><%= link_to t('logout')%></li>
-                <% else %>
-                  <li><%= link_to t('sign_up')%></li>
-                  <li><%= link_to t('login')%></li>
-                <% end %>
+              <% if user_signed_in? %>
+                <%= t('logged_in') %>&nbsp;<strong><%= current_user.email %></strong>.
+                <li><%= link_to t('edit_profile') %></li>
+                <li><%= link_to t('logout') %></li>
+              <% else %>
+                <li><%= link_to t('sign_up') %></li>
+                <li><%= link_to t('login') %></li>
+              <% end %>
+              <% if I18n.locale == I18n.default_locale %>
+                  <li><%= link_to "DE",:locale=>'de' %></li>
+                  <li><%= link_to image_tag('de.png',:size=>'20x15',:border=> 0),:locale=>'de' %></li>
+              <% else %>
+                  <li><%= link_to "EN",:locale=>'en' %></li>
+                  <li><%= link_to image_tag('en.png',:size=>'20x15',:border=> 0),:locale=>'en' %></li>
+              <%end%>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

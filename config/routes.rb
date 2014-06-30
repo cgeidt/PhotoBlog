@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :photos, only: [:index]
+  post '/:locale' => "application#set_locale"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
