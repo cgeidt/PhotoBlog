@@ -3,15 +3,12 @@
 # than English, add the necessary files in this directory.
 #
 # To use the locales, use `I18n.t`:
-#
 #     I18n.t 'hello'
 #
 # In views, this is aliased to just `t`:
-#
 #     <%= t('hello') %>
 #
 # To use a different locale, set it with `I18n.locale`:
-#
 #     I18n.locale = :es
 #
 # This would use the information in config/locales/es.yml.
@@ -19,44 +16,53 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+# Alphabetisch sortiert
+# Beispiel: <%= t('text') %>
+
 de:
-    actions:        "Aktionen"
-    album:          "Album"
-    albums:         "Alben"
-    authors:        "  C. Geidt & S. Schultheiß  "
-    btn_add_photo:  "+ Neues Photo hinzufügen"
-    btn_back:       "<= Zurück"
-    comment:        "Kommentar"
-    comments:       "Kommentare"
-    confirm:        "Sind Sie sicher?"
-    create_album:   "Neues Album erstellen"
-    delete:         "Löschen"
-    delete_comment: "Kommentar löschen"
-    delete_photo:   "Photo löschen"
-    description:    "Beschreibung"
-    edit:           "Bearbeiten"
-    edit_album:     "Album bearbeiten"
-    edit_photo:     "Photo bearbeiten"
-    edit_profile:   "Profil bearbeiten"
-    home:           "Home"
-    logged_in:      "Eingeloggt als "
-    login:          "Einloggen"
-    logout:         "Ausloggen"
-    main_title:     "PhotoBlog"
-    more:           "Mehr"
-    new_album:      "Neues Album"
-    new_comment:    "Neuer Kommentar"
-    new_photo:      "Neues Photo"
-    photo:          "Photo"
-    photoblog:      "PhotoBlog"
-    photos:         "Photos"
-    private:        "privat"
-    public:         "öffentlich"
-    show:           "Anzeigen"
-    sidebar:        "Seitennavigation"
-    sign_up:        "Anmelden"
-    text_filename:  "filename: "
-    text_url:       "url: "
-    title:          "Titel"
-    to_home:        "Zurück zur Startseite"
-    view:           "Anzeigen"
+  actions:              "Aktionen"
+  album:                "Album"
+  albums:               "Alben"
+  authors:              "  C. Geidt & S. Schultheiß  "
+  btn_add_photo:        "+ Neues Photo hinzufügen"
+  btn_back:             "<= Zurück"
+  comment:              "Kommentar"
+  comments:             "Kommentare"
+  confirm:              "Sind Sie sicher?"
+  confirm_account:      "Meinen Account bestätigen"
+  confirm_instructions: "Sie können ihre E-Mail Adresse durch folgenden Link bestätigen: "
+  create_album:         "Neues Album erstellen"
+  delete:               "Löschen"
+  delete_comment:       "Kommentar löschen"
+  delete_photo:         "Photo löschen"
+  description:          "Beschreibung"
+  edit:                 "Bearbeiten"
+  edit_album:           "Album bearbeiten"
+  edit_photo:           "Photo bearbeiten"
+  edit_profile:         "Profil bearbeiten"
+  forgot_pw:            "Passwort vergessen?"
+  home:                 "Home"
+  logged_in:            "Eingeloggt als "
+  login:                "Einloggen"
+  logout:               "Ausloggen"
+  main_title:           "PhotoBlog"
+  more:                 "Mehr"
+  new_album:            "Neues Album"
+  new_comment:          "Neuer Kommentar"
+  new_photo:            "Neues Photo"
+  photo:                "Photo"
+  photoblog:            "PhotoBlog"
+  photos:               "Photos"
+  private:              "privat"
+  public:               "öffentlich"
+  resend_confirmation:  "Bestätigungsinformationen erneut zusenden"
+  show:                 "Anzeigen"
+  sidebar:              "Seitennavigation"
+  sign_in:              "Einloggen"
+  sign_up:              "Anmelden"
+  text_filename:        "filename: "
+  text_url:             "url: "
+  title:                "Titel"
+  to_home:              "Zurück zur Startseite"
+  welcome:              "Willkommen "
+  view:                 "Anzeigen"

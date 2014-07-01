@@ -3,15 +3,12 @@
 # than English, add the necessary files in this directory.
 #
 # To use the locales, use `I18n.t`:
-#
 #     I18n.t 'hello'
 #
 # In views, this is aliased to just `t`:
-#
 #     <%= t('hello') %>
 #
 # To use a different locale, set it with `I18n.locale`:
-#
 #     I18n.locale = :es
 #
 # This would use the information in config/locales/es.yml.
@@ -19,45 +16,53 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  actions:        "Actions"
-  album:          "Album"
-  albums:         "Albums"
-  authors:        "  C. Geidt & S. Schultheiß  "
-  btn_add_photo:  "+ Add new photo"
-  btn_back:       "<= Back"
-  comment:        "Comment"
-  comments:       "Comments"
-  confirm:        "Are you sure?"
-  create_album:   "Create new album"
-  delete:         "Delete"
-  delete_comment: "Delete comment"
-  delete_photo:   "Delete photo"
-  description:    "Description"
-  edit:           "Edit"
-  edit_album:     "Edit album"
-  edit_photo:     "Edit photo"
-  edit_profile:   "Edit profile"
-  home:           "Home"
-  logged_in:      "Logged in as "
-  login:          "Login"
-  logout:         "Logout"
-  main_title:     "PhotoBlog"
-  more:           "More"
-  new_album:      "New album"
-  new_comment:    "New comment"
-  new_photo:      "New photo"
-  photo:          "Photo"
-  photoblog:      "PhotoBlog"
-  photos:         "Photos"
-  private:        "private"
-  public:         "public"
-  show:           "Show"
-  sidebar:        "Sidebar"
-  sign_up:        "Sign up"
-  text_filename:  "filename: "
-  text_url:       "url: "
-  title:          "Title"
-  to_home:        "To home screen"
-  view:           "View"
+# Sorted alphabetically
+# Example: <%= t('text') %>
 
+en:
+  actions:              "Actions"
+  album:                "Album"
+  albums:               "Albums"
+  authors:              "  C. Geidt & S. Schultheiß  "
+  btn_add_photo:        "+ Add new photo"
+  btn_back:             "<= Back"
+  comment:              "Comment"
+  comments:             "Comments"
+  confirm:              "Are you sure?"
+  confirm_account:      "Confirm my account"
+  confirm_instructions: "You can confirm your account email through the link below: "
+  create_album:         "Create new album"
+  delete:               "Delete"
+  delete_comment:       "Delete comment"
+  delete_photo:         "Delete photo"
+  description:          "Description"
+  edit:                 "Edit"
+  edit_album:           "Edit album"
+  edit_photo:           "Edit photo"
+  edit_profile:         "Edit profile"
+  forgot_pw:            "Forgot your password?"
+  home:                 "Home"
+  logged_in:            "Logged in as "
+  login:                "Login"
+  logout:               "Logout"
+  main_title:           "PhotoBlog"
+  more:                 "More"
+  new_album:            "New album"
+  new_comment:          "New comment"
+  new_photo:            "New photo"
+  photo:                "Photo"
+  photoblog:            "PhotoBlog"
+  photos:               "Photos"
+  private:              "private"
+  public:               "public"
+  resend_confirmation:  "Resend confirmation instructions"
+  show:                 "Show"
+  sidebar:              "Sidebar"
+  sign_in:              "Sign in"
+  sign_up:              "Sign up"
+  text_filename:        "filename: "
+  text_url:             "url: "
+  title:                "Title"
+  to_home:              "To home screen"
+  welcome:              "Welcome "
+  view:                 "View"
