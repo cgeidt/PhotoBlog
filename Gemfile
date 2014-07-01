@@ -9,6 +9,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'libv8', '3.16.14.3'
 
+# For twitter bootstrap
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
 gem 'sass-rails', '~> 4.0.3'
@@ -18,13 +19,15 @@ gem 'paperclip', '~> 4.1'
 gem 'carrierwave'
 gem 'imagemagick-binaries'
 
+# For user authentication
+gem 'devise'
+
 # For image modification
 gem 'mini_magick'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'devise'
 gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

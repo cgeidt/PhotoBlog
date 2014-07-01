@@ -55,12 +55,12 @@
             </ul>
             <ul class="nav" style="float:right">
               <% if user_signed_in? %>
-                <%= t('logged_in') %>&nbsp;<strong><%= current_user.email %></strong>.
-                <li><%= link_to t('edit_profile') %></li>
-                <li><%= link_to t('logout') %></li>
+                <li><%= link_to edit_user_registration_path do %><%= t('logged_in') %><strong><%= current_user.username %></strong>&nbsp;(<%= current_user.email %>)&nbsp;<% end %></li>
+                <li><%= link_to t('edit_profile'),edit_user_registration_path,:class=>'navbar-link' %></li>
+                <li><%= link_to t('logout'),destroy_user_session_path,method: :delete,:class=>'navbar-link' %></li>
               <% else %>
-                <li><%= link_to t('sign_up') %></li>
-                <li><%= link_to t('login') %></li>
+                <li><%= link_to t('sign_up'),new_user_registration_path,:class=>'navbar-link' %></li>
+                <li><%= link_to t('login'),new_user_session_path,:class=>'navbar-link' %></li>
               <% end %>
               <% if I18n.locale == I18n.default_locale %>
                 <li><%= link_to "DE",:locale=>'de' %></li>
@@ -100,7 +100,7 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy;&nbsp;<%= t('authors') %>&nbsp;</p>
+        <p><%= t('authors') %></p>
       </footer>
 
     </div> <!-- /container -->
