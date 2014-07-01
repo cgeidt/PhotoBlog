@@ -1,20 +1,32 @@
 <% if @photo == nil %>
-  <%= bootstrap_form_for [@album, @album.photos.build], html: {multipart: true} do |f| %>
+
+    <%= bootstrap_form_for [@album, @album.photos.build], html: {multipart: true} do |f| %>
     <%= f.text_field :title %>
     <%= f.text_area :description %>
     <%= f.text_field :url %>
     <%= f.text_field :filename %>
+    <p>
+      <fieldset style="color:#2efd00;display:inline"><%= f.label :private,t('private'),:value=>true %><%= f.radio_button :private,true %></fieldset>
+      <fieldset style="color:#fd7a00;display:inline"><%= f.label :private,t('public'),:value=>false %><%= f.radio_button :private,false %></fieldset>
+    </p>
     <%= f.submit %>
   <% end %>
+
 <% else %>
-  <%= bootstrap_form_for [@album, @photo], html: {multipart: true} do |f| %>
+
+    <%= bootstrap_form_for [@album, @photo], html: {multipart: true} do |f| %>
     <%= f.text_field :title %>
     <%= f.text_area :description %>
     <%= f.text_field :url %>
     <%= f.text_field :filename %>
+    <p>
+      <fieldset style="color:#2efd00;display:inline"><%= f.label :private,t('private'),:value=>true %><%= f.radio_button :private,true %></fieldset>
+      <fieldset style="color:#fd7a00;display:inline"><%= f.label :private,t('public'),:value=>false %><%= f.radio_button :private,false %></fieldset>
+    </p>
     <%= f.submit %>
   <% end %>
-<%end%>
+
+<% end %>
 
 
 

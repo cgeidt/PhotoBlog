@@ -10,6 +10,13 @@
 <p>
   <%= @photo.filename %>
 </p>
+<p>
+  <% if @photo.private %>
+    <p style="color:#2efd00"><%= t('private') %></p>
+  <% else %>
+    <p style="color:#fd7a00"><%= t('public') %></p>
+  <% end %>
+</p>
 <br/>
 
 <%= link_to t('btn_back'), album_path(@photo.album), class: 'btn btn-small btn-info' %>

@@ -1,5 +1,9 @@
 <%= bootstrap_form_for(@album) do |f| %>
     <%= f.text_field :title %>
     <%= f.text_area :description %>
+    <p>
+      <fieldset style="color:#2efd00;display:inline"><%= f.label :private,t('private'),:value=>true %><%= f.radio_button :private,true %></fieldset>
+      <fieldset style="color:#fd7a00;display:inline"><%= f.label :private,t('public'),:value=>false %><%= f.radio_button :private,false %></fieldset>
+    </p>
     <%= f.submit %>
 <% end %>

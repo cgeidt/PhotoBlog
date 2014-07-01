@@ -4,5 +4,6 @@ class Photo < ActiveRecord::Base
   validates :filename, presence: true
   validates :title, presence: true
   belongs_to :album
+  belongs_to :user
   has_many :comments, dependent: :destroy
 end

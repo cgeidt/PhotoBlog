@@ -8,6 +8,11 @@
       <%= link_to image_tag(photo.filename,:size=>'320x240',:border=> 0),album_photo_path(photo.album, photo) %>
       <p>
         &nbsp;<%= t('text_url') %>&nbsp;<%= photo.url %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= t('text_filename') %>&nbsp;<%= photo.filename %>&nbsp;
+        <% if photo.private %>
+          <p style="color:#2efd00"><%= t('private') %></p>
+        <% else %>
+          <p style="color:#fd7a00"><%= t('public') %></p>
+        <% end %>
       </p>
     </p>
   </p>

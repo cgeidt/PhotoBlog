@@ -14,12 +14,11 @@ gem 'bootstrap_form'
 gem 'sass-rails', '~> 4.0.3'
 
 # For file upload
+gem 'paperclip', '~> 4.1'
 gem 'carrierwave'
-
-#
 gem 'imagemagick-binaries'
 
-# For image display
+# For image modification
 gem 'mini_magick'
 
 # Use Uglifier as compressor for JavaScript assets

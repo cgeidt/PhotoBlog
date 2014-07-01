@@ -19,19 +19,25 @@ ActiveRecord::Schema.define(version: 20140628171713) do
   create_table "albums", force: true do |t|
     t.string   "title"
     t.string   "description"
+    t.integer  "user_id"
+    t.boolean  "private"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "albums", ["user_id"], name: "index_albums_on_user_id", using: :btree
 
   create_table "comments", force: true do |t|
     t.string   "commenter"
     t.text     "body"
     t.integer  "photo_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "comments", ["photo_id"], name: "index_comments_on_photo_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "photos", force: true do |t|
     t.string   "url"
@@ -39,15 +45,19 @@ ActiveRecord::Schema.define(version: 20140628171713) do
     t.string   "title"
     t.string   "description"
     t.integer  "album_id"
+    t.integer  "user_id"
+    t.boolean  "private"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "photos", ["album_id"], name: "index_photos_on_album_id", using: :btree
+  add_index "photos", ["user_id"], name: "index_photos_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
+    t.string   "username"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -56,6 +66,10 @@ ActiveRecord::Schema.define(version: 20140628171713) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
