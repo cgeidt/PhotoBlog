@@ -55,8 +55,8 @@ Comment.create!([
 ])
 
 User.create!([
-  {:id=>101,:email=>'alexviern@web.de',:encrypted_password=>'$2a$10$8tSlmZPewEwIkg5isVp1buDjc5Eero387VEHdjq/uZ7co5qkNrGFe',:username=>'Alvi',:reset_password_token=>nil,:reset_password_sent_at=>nil,:remember_created_at=>nil,:sign_in_count=>1,:current_sign_in_at=>'2014.7.1 13:20:48.126033',:last_sign_in_at=>'2014.7.1 13:20:48.126033',:current_sign_in_ip=>'127.0.0.1',:last_sign_in_ip=>'127.0.0.1',:confirmation_token=>nil,:confirmed_at=>nil,:confirmation_sent_at=>nil,:created_at=>'2014.7.1 13:20:48.116033',:updated_at=>'2014.7.1 13:20:48.127034'},
-  {:id=>102,:email=>'fake@address.com',:encrypted_password=>'$2a$10$TmxuQ20Ygp1Jbj2fOeCYDu3C7435P1UMviF12edrLJTzOel81mxbS',:username=>'Fake',:reset_password_token=>nil,:reset_password_sent_at=>nil,:remember_created_at=>nil,:sign_in_count=>1,:current_sign_in_at=>'2014.7.1 13:20:48.126033',:last_sign_in_at=>'2014.7.1 13:20:48.126033',:current_sign_in_ip=>'127.0.0.1',:last_sign_in_ip=>'127.0.0.1',:confirmation_token=>nil,:confirmed_at=>nil,:confirmation_sent_at=>nil,:created_at=>'2014.7.1 13:20:48.116033',:updated_at=>'2014.7.1 13:20:48.127034'}
+  {:id=>101,:email=>'alexviern@web.de',:username=>'Alvi',:password=>'password',:reset_password_token=>nil,:reset_password_sent_at=>nil,:remember_created_at=>nil,:sign_in_count=>1,:current_sign_in_at=>Time.now,:last_sign_in_at=>Time.now,:current_sign_in_ip=>'127.0.0.1',:last_sign_in_ip=>'127.0.0.1',:confirmation_token=>nil,:confirmed_at=>nil,:confirmation_sent_at=>nil,:created_at=>Time.now,:updated_at=>Time.now},
+  {:id=>102,:email=>'fake@address.com',:username=>'Fake',:password=>'password',:reset_password_token=>nil,:reset_password_sent_at=>nil,:remember_created_at=>nil,:sign_in_count=>1,:current_sign_in_at=>Time.now,:last_sign_in_at=>Time.now,:current_sign_in_ip=>'127.0.0.1',:last_sign_in_ip=>'127.0.0.1',:confirmation_token=>nil,:confirmed_at=>nil,:confirmation_sent_at=>nil,:created_at=>Time.now,:updated_at=>Time.now}
 ])
 
 puts "Success: seed data loaded"
