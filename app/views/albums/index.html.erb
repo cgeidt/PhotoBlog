@@ -1,33 +1,30 @@
 <h2><%= t('albums') %></h2>
 <br/>
 <%= link_to t('new_album'), new_album_path, class: 'btn btn-success' %>
-<br/><br/>
-<table class="table">
-  <colgroup>
-    <col width="20%">
-    <col width="50%">
-    <col width="30%">
-  </colgroup>
-  <thead>
-  <tr>
-    <th><%= t('title') %></th>
-    <th><%= t('description') %></th>
-    <th><%= t('actions') %></th>
-  </tr>
-  </thead>
-  <tbody>
+<table class="table table-horizontal table-hover">
   <% @albums.each do |album| %>
       <tr>
-        <td><%= album.title %></td>
-        <td><%= album.description.truncate(50) %></td>
-        <td>
-          <%= link_to t('view'), album_path(album), class: 'btn btn-small btn-success' %>
-          <%= link_to t('edit'), edit_album_path(album), class: 'btn btn-small btn-info' %>
-          <%= link_to t('delete'), album_path(album), class: 'btn btn-small btn-danger', method: :delete, confirm: t('confirm') %>
+        <div class="media">
+          <th style="width:10%;">
+
+            <%= link_to image_tag(album.photos.first.image, {height: 64, width: 64, :class => 'media-object'}), album_path(album), {:class => 'pull-left'} %>
+
+          </th>
+          <td style="width:75%;">
+                <div class="media-body">
+                  <h4 class="media-heading">
+                    <%= album.title %>
+                  </h4> <%= album.description.truncate(50) %>
+                </div>
+          </td>
+        </div>
+        <td style="text-align: right; vertical-align: middle;">
+          <%= link_to t('edit'), edit_album_path(album), class: 'btn  btn-info' %>
+          <%= link_to t('delete'), album_path(album), class: 'btn  btn-danger', method: :delete, confirm: t('confirm') %>
         </td>
       </tr>
   <% end %>
-  </tbody>
 </table>
 <br/>
 <%= link_to t('to_home'), albums_index_path, class: 'btn btn-small btn-success' %>
+

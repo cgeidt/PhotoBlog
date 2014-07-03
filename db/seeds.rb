@@ -23,7 +23,6 @@ end
 
 if PHOTOS
   Photo.create!([
-    {:id=>101,:image_file_name=>'10001.jpg',:image_content_type=>'image/jpeg',:image_file_size=>'406387',:image_updated_at=>Time.now,:title=>"Strand",           :description=>"Der Strand im Urlaub",         :album_id=>101,:user_id=>101,:private=>true, :created_at=>Time.now,:updated_at=>Time.now},
     {:id=>102,:image_file_name=>'10002.jpg',:image_content_type=>'image/jpeg',:image_file_size=>'453342',:image_updated_at=>Time.now,:title=>"Sonnenuntergang",  :description=>"Der Sonnenuntergang am Strand",:album_id=>101,:user_id=>101,:private=>false,:created_at=>Time.now,:updated_at=>Time.now},
     {:id=>103,:image_file_name=>'10003.jpg',:image_content_type=>'image/jpeg',:image_file_size=>'479609',:image_updated_at=>Time.now,:title=>"Fische",           :description=>"Kleine Fische im Wasser",      :album_id=>101,:user_id=>101,:private=>false,:created_at=>Time.now,:updated_at=>Time.now},
     {:id=>104,:image_file_name=>'10004.jpg',:image_content_type=>'image/jpeg',:image_file_size=>'480515',:image_updated_at=>Time.now,:title=>"Partyvorbereitung",:description=>"Foto vom Aufbauen",            :album_id=>102,:user_id=>101,:private=>true, :created_at=>Time.now,:updated_at=>Time.now},
