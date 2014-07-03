@@ -40,13 +40,16 @@ ActiveRecord::Schema.define(version: 20140701130556) do
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "photos", force: true do |t|
-    t.string   "url"
-    t.string   "filename"
+    t.string   "image"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.string   "title"
     t.string   "description"
     t.integer  "album_id"
     t.integer  "user_id"
-    t.boolean  "private"
+    t.boolean  "private",            default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

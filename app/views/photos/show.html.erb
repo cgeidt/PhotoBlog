@@ -5,10 +5,7 @@
   <%= @photo.description %>
 </p>
 <p>
-  <%= @photo.url %>
-</p>
-<p>
-  <%= @photo.filename %>
+  <%= @photo.image %>
 </p>
 <p>
   <% if @photo.private %>
@@ -25,7 +22,7 @@
 <br/>
 <br/>
 
-<%= image_tag @photo.filename,:border=>0 %>
+<%= image_tag @photo.image.url %>
 <br/>
 
 <br/>

@@ -15,7 +15,8 @@ gem 'bootstrap_form'
 gem 'sass-rails', '~> 4.0.3'
 
 # For file upload
-gem 'paperclip', '~> 4.1'
+gem 'paperclip', '3.5.4' # 4.1.1 4.1.0 4.0.0 3.5.4 3.5.3
+gem 'cocaine', '0.5.4'
 gem 'carrierwave'
 gem 'imagemagick-binaries'
 

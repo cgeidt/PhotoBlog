@@ -7,6 +7,7 @@ class PhotosController < ApplicationController
   def create
     @album = Album.find(params[:album_id])
     @photo = @album.photos.create(photo_params)
+    @photo.user_id = current_user.id
     if @photo.save then
       redirect_to album_photo_path(@album, @photo)
     else
@@ -46,15 +47,7 @@ class PhotosController < ApplicationController
 
   private
 
-  def print_photo_params(text)
-    puts "###{text}##photo_params##title:#{photo_params[:title]}#description:#{photo_params[:description]}#url:#{photo_params[:url]}#filename:#{photo_params[:filename]}##"
-  end
-
-  def photo_params_simple
-    params.require(:photo).permit(:title, :description)
-  end
-
   def photo_params
-    params.require(:photo).permit(:url, :filename, :title, :description)
+    params.require(:photo).permit(:image, :title, :description, :private)
   end
 end

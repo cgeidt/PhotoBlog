@@ -1,7 +1,14 @@
 class Photo < ActiveRecord::Base
-  #mount_uploader :url, FileUploader
-  validates :url, presence: true
-  validates :filename, presence: true
+  # Paperclip
+  has_attached_file :image,
+                    #:styles=>{:small=>"320x240>",:thumb=>"80x60>"},
+                    :path=>":rails_root/public/uploads/:class/:style/:filename",
+                    :url=>"/uploads/:class/:style/:filename",
+                    :default_url=>"/uploads/:class/missing.png"
+
+  validates_attachment_content_type :image, :content_type => /image/
+
+  validates :image, presence: true
   validates :title, presence: true
   belongs_to :album
   belongs_to :user

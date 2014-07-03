@@ -78,7 +78,7 @@ GEM
     minitest (5.3.5)
     multi_json (1.10.1)
     orm_adapter (0.5.0)
-    paperclip (4.1.1)
+    paperclip (3.5.4)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
@@ -156,6 +156,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.1.1)
   bootstrap_form
   carrierwave
+  cocaine (= 0.5.4)
   coffee-rails (~> 4.0.0)
   devise
   imagemagick-binaries
@@ -163,7 +164,7 @@ DEPENDENCIES
   jquery-rails
   libv8 (= 3.16.14.3)
   mini_magick
-  paperclip (~> 4.1)
+  paperclip (= 3.5.4)
   pg
   rails (= 4.1.1)
   sass-rails (~> 4.0.3)

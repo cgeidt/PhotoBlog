@@ -37,4 +37,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Paperclip ImageMagick directory
+  Paperclip.options[:command_path] = "C:\ProgramData\ImageMagick"
+  #Paperclip.options[:content_type_mappings] = { jpg: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }
 end
