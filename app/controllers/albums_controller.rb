@@ -1,5 +1,7 @@
 class AlbumsController < ApplicationController
 
+
+  add_breadcrumb "Albums", :albums
   def new
     @album = Album.new
   end
@@ -32,6 +34,7 @@ class AlbumsController < ApplicationController
 
   def index
     @albums = Album.all
+
   end
 
   def show
