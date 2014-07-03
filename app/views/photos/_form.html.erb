@@ -4,11 +4,7 @@
   <%= bootstrap_form_for [@album, @album.photos.build],:url=>album_photos_path,html: {multipart: true} do |f| %>
       <%= f.text_field :title %>
       <%= f.text_area :description %>
-      <% if @photo.image.exists? %>
-          <%= image_tag @photo.image.url,:size=>'320x240' %>
-      <% else %>
-          <%= f.file_field :image %>
-      <% end %>
+      <%= f.file_field :image %>
       <p>
       <fieldset style="color:#2efd00;display:inline"><%= f.label :private,t('private'),:value=>true %><%= f.radio_button :private,true %></fieldset>
       <fieldset style="color:#fd7a00;display:inline"><%= f.label :private,t('public'),:value=>false %><%= f.radio_button :private,false %></fieldset>
@@ -22,11 +18,7 @@
   <%= bootstrap_form_for [@album, @photo],html: {multipart: true} do |f| %>
     <%= f.text_field :title %>
     <%= f.text_area :description %>
-    <% if @photo.image.exists? %>
-      <%= image_tag @photo.image.url,:size=>'320x240' %>
-    <% else %>
-      <%= f.file_field :image %>
-    <% end %>
+    <%= image_tag @photo.image.url,:size=>'320x240' %>
     <p>
       <fieldset style="color:#2efd00;display:inline"><%= f.label :private,t('private'),:value=>true %><%= f.radio_button :private,true %></fieldset>
       <fieldset style="color:#fd7a00;display:inline"><%= f.label :private,t('public'),:value=>false %><%= f.radio_button :private,false %></fieldset>

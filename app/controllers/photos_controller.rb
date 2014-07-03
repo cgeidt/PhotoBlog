@@ -36,7 +36,10 @@ class PhotosController < ApplicationController
   end
 
   def index
-    @photos = Photo.all
+    @photos = Photo.is_public
+    unless current_user == nil
+      @photos += Photo.is_private.where(:user_id=>current_user.id)
+    end
   end
 
   def show

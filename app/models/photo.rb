@@ -13,4 +13,7 @@ class Photo < ActiveRecord::Base
   belongs_to :album
   belongs_to :user
   has_many :comments, dependent: :destroy
+
+  scope :is_public,->{where(private:false)}
+  scope :is_private,->{where(private:true)}
 end
