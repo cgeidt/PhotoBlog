@@ -1,20 +1,3 @@
-<h2>
-  <%= @photo.title %>
-</h2>
-<p>
-  <%= @photo.description %>
-</p>
-<p>
-  <%= @photo.image %>
-</p>
-<p>
-  <% if @photo.private %>
-    <p style="color:#2efd00"><%= t('private') %></p>
-  <% else %>
-    <p style="color:#fd7a00"><%= t('public') %></p>
-  <% end %>
-</p>
-<br/>
 
 <%= link_to t('btn_back'), album_path(@photo.album), class: 'btn btn-small btn-info' %>
 <%= link_to t('to_home'), albums_index_path, class: 'btn btn-small btn-info' %>
@@ -22,8 +5,39 @@
 <br/>
 <br/>
 
-<%= image_tag @photo.image.url %>
-<br/>
+<div class="carousel slide" id="carousel-435758">
+  <ol class="carousel-indicators">
+    <% @photos.each_with_index do |photo, index| %>
+        <% active = (@photo.id == photo.id)? 'active' : '' %>
+        <li class="<%= active %>" >
+        </li>
+    <% end %>
+
+  </ol>
+  <div class="carousel-inner">
+    <% @photos.each do |photo| %>
+        <% active = (@photo.id == photo.id)? 'active' : '' %>
+        <div class="item <%= active %>">
+          <%= image_tag(photo.image, {height:778, width:1170}) %>
+          <div class="carousel-caption">
+            <h4>
+              <%= photo.title %>
+            </h4>
+            <p>
+              <%= photo.description %>
+            </p>
+          </div>
+        </div>
+    <% end %>
+  </div>
+  <a id="left" data-slide="prev" href="#carousel-435758" class="left carousel-control">‹</a> <a id="right" data-slide="next" href="#carousel-435758" class="right carousel-control">›</a>
+</div>
+
+<% if @photo.private %>
+    <p style="color:#2efd00"><%= t('private') %></p>
+<% else %>
+    <p style="color:#fd7a00"><%= t('public') %></p>
+<% end %>
 
 <br/>
 <h3><%= t('comments') %></h3>
@@ -34,3 +48,9 @@
 
 <h3><%= t('new_comment') %></h3>
 <%= render 'comments/form' %>
+
+<script>
+    $(function() {
+        $('.carousel').carousel('pause');
+    });
+</script>
