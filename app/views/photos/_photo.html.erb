@@ -1,27 +1,25 @@
-<li class="list-group-item active">	  
-  <h4 class="list-group-item-heading"><%= photo.title %></h4>
-  <p class="list-group-item-text">
-    <p>
-      <%= photo.description %>
-    </p>
-    <p>
-      <%= link_to image_tag(photo.image,:size=>'320x240',:border=> 0),album_photo_path(photo.album, photo) %>
+<div class="span4" style="margin-bottom:15px;">
+  <div class="thumbnail">
+
+    <%= link_to image_tag(photo.image,:alt=>'320x240'),album_photo_path(photo.album, photo) %>
+    <div class="caption">
+      <h3>
+        <%= photo.title %>
+      </h3>
       <p>
-        &nbsp;<%= t('text_image') %><%= photo.image %>&nbsp;
+        <%= photo.description %>
+      </p>
+      <p>
         <% if photo.private %>
           <p style="color:#2efd00"><%= t('private') %></p>
-        <% else %>
+      <% else %>
           <p style="color:#fd7a00"><%= t('public') %></p>
-        <% end %>
+      <% end %>
       </p>
-    </p>
-  </p>
-
-  <p>
-    <%= link_to t('more'), album_photo_path(photo.album, photo)%>
-    <br/><br/>
-    <%= link_to t('delete_photo'),[photo.album,photo],method: :delete,data:{confirm: t('confirm')} %>
-  </p>
-
-  <br/>
-</li>
+      <p>
+        <%= link_to t('more'), album_photo_path(photo.album, photo)%>
+        <%= link_to t('delete_photo'),[photo.album,photo],method: :delete,data:{confirm: t('confirm')} %>
+      </p>
+    </div>
+  </div>
+</div>
