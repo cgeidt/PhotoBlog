@@ -1,5 +1,12 @@
-<%= bootstrap_form_for([@album,@photo,@photo.comments.build]) do |f| %>
-    <%= f.text_field :commenter %>
+<% if current_user == nil %>
+
+  <%= t('comment_sign_in') %>
+
+<% else %>
+
+  <%= bootstrap_form_for([@album,@photo,@photo.comments.build]) do |f| %>
     <%= f.text_area :body %>
     <%= f.submit class: 'btn btn-small btn-success' %>
+  <% end %>
+
 <% end %>

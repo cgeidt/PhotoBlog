@@ -2,6 +2,9 @@ class PhotosController < ApplicationController
 
   def new
     @album = Album.find(params[:album_id])
+    unless @album.user_id == current_user.id
+      redirect_to @album
+    end
   end
 
   def create
@@ -18,6 +21,9 @@ class PhotosController < ApplicationController
   def edit
     @album = Album.find(params[:album_id])
     @photo = Photo.find(params[:id])
+    unless @photo.user_id == current_user.id
+      redirect_to album_photo_path
+    end
   end
 
   def update
@@ -31,8 +37,10 @@ class PhotosController < ApplicationController
   def destroy
     @album = Album.find(params[:album_id])
     @photo = @album.photos.find(params[:id])
-    @photo.destroy
-    redirect_to album_path(@album)
+    if owner(@photo)
+      @photo.destroy
+      redirect_to album_path(@album)
+    end
   end
 
   def index
@@ -49,6 +57,20 @@ class PhotosController < ApplicationController
 
 
   private
+
+  def owner(photo)
+    if photo == nil
+      return false
+    end
+    if current_user == nil
+      return false
+    end
+    unless photo.user_id == current_user.id
+      return false
+    else
+      return true
+    end
+  end
 
   def photo_params
     params.require(:photo).permit(:image, :title, :description, :private)

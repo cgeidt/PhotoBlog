@@ -2,17 +2,17 @@ class CommentsController < ApplicationController
 
   def new
     @comment = Comment.new
+    @comment.commenter = current_user.username
   end
 
   def create
     @photo = Photo.find(params[:photo_id])
     @comment = @photo.comments.create(comment_params)
+    @comment.commenter = current_user.username
     @comment.user_id = current_user.id
     if @comment.save
       @album = Album.find(@photo.album_id)
       redirect_to album_photo_path(@album, @photo)
-    else
-      # stay here
     end
   end
 
@@ -45,6 +45,6 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:commenter, :body)
+    params.require(:comment).permit(:body)
   end
 end

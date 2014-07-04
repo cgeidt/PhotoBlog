@@ -6,6 +6,7 @@ class AlbumsController < ApplicationController
 
   def create
     @album = Album.new(album_params)
+    @album.user_id = current_user.id
     if @album.save then
       redirect_to @album
     else
@@ -15,6 +16,9 @@ class AlbumsController < ApplicationController
 
   def edit
     @album = Album.find(params[:id])
+    unless @album.user_id == current_user.id
+      redirect_to album_path
+    end
   end
 
   def update
@@ -26,12 +30,17 @@ class AlbumsController < ApplicationController
 
   def destroy
     @album = Album.find(params[:id])
-    @album.destroy
-    redirect_to albums_path
+    if owner(@album)
+      @album.destroy
+      redirect_to album_path(@album)
+    end
   end
 
   def index
-    @albums = Album.all
+    @albums = Album.is_public
+    unless current_user == nil
+      @albums += Album.is_private.where(:user_id=>current_user.id)
+    end
   end
 
   def show
@@ -39,6 +48,20 @@ class AlbumsController < ApplicationController
   end
 
   private
+
+  def owner(album)
+    if album == nil
+      return false
+    end
+    if current_user == nil
+      return false
+    end
+    unless album.user_id == current_user.id
+      return false
+    else
+      return true
+    end
+  end
 
   def album_params
     params.require(:album).permit(:title, :description)

@@ -1,8 +1,12 @@
 <li class="list-group-item active">
   <p class="list-group-item-text">
-    <h5><%= comment.commenter %></h5>
-    <%= comment.body %>
-    <br/>
+    <p>
+      <h7><strong><%= comment.commenter %></strong></h7>
+      <h8><i>&nbsp;&nbsp;&nbsp;[<%= comment.created_at %>]</i></h8>
+    </p>
+    <p>
+      <%= comment.body %>
+    </p>
   </p>
   <p>
     <%= link_to t('delete_comment'),[comment.photo.album,comment.photo,comment],method: :delete,data: {confirm:'Are you sure?'} %>
