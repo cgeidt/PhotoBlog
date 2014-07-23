@@ -1,7 +1,7 @@
 class AlbumsController < ApplicationController
 
-
   add_breadcrumb "Albums", :albums
+
   def new
     @album = Album.new
   end
@@ -47,6 +47,10 @@ class AlbumsController < ApplicationController
 
   def show
     @album = Album.find(params[:id])
+    @photos = @album.photos.is_public
+    unless current_user == nil
+      @photos += @album.photos.is_private.where(:user_id=>current_user.id)
+    end
   end
 
   private

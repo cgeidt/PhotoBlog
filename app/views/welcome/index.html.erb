@@ -2,25 +2,12 @@
 <hr>
 <br/>
 <% @albums.each do |album| %>
-    <p>
-      <h3><%= album.title %></h3>
-        <p>
-          <%= album.description %>
-        </p>
-        <%= link_to t('more'), album %>
-    </p>
-    <br/>
+  <p>
+    <h3><%= album.title %></h3>
+      <p>
+        <%= album.description %>
+      </p>
+      <%= link_to t('more'), album %>
+  </p>
+  <br/>
 <% end %>
-
-<br/><br/>
-<br/><br/>
-<h4>available buttons</h4>
-<%= link_to "Standard",albums_index_path,class:'btn btn-small' %>
-<%= link_to "Primary", albums_index_path,class:'btn btn-small btn-primary' %>
-<%= link_to "Info",    albums_index_path,class:'btn btn-small btn-info' %>
-<%= link_to "Success", albums_index_path,class:'btn btn-small btn-success' %>
-<%= link_to "Warning", albums_index_path,class:'btn btn-small btn-warning' %>
-<%= link_to "Danger",  albums_index_path,class:'btn btn-small btn-danger' %>
-<%= link_to "Inverse", albums_index_path,class:'btn btn-small btn-inverse' %>
-<%= link_to "Link",    albums_index_path,class:'btn btn-small btn-link' %>
-<br/>

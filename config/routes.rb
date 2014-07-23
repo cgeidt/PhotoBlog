@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  get "albums/index"
+  get "welcome/index"
   # You can have the root of your site routed with "root"
-  root 'albums#index'
+  root 'welcome#index'
 
   resources :albums do
     resources :photos do
