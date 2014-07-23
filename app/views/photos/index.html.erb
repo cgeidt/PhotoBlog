@@ -2,13 +2,38 @@
 <br/>
 
 <p>
-  <%= link_to t('btn_back'), welcome_index_path, class: 'btn btn-small btn-info' %>
+  <%= link_to t('btn_back'), albums_index_path, class: 'btn btn-small btn-info' %>
 </p>
 <hr>
+<div class="carousel slide" id="carousel-435758">
+  <ol class="carousel-indicators">
+    <% @photos.each_with_index do |photo, index| %>
+        <li data-slide-to="<%= index %>" data-target="#carousel-435758">
+        </li>
+    <% end %>
 
-<p>
-  <% @photos.each do |photo| %>
-    <%= link_to image_tag(photo.image,:size=>'240x180',:border=> 0),album_photo_path(photo.album, photo) %>
-  <% end %>
-</p>
+  </ol>
+  <div class="carousel-inner">
+    <% @photos.each do |photo| %>
+      <div class="item">
+        <%= link_to image_tag(photo.image, {height:778, width:1170}),album_photo_path(photo.album, photo) %>
+        <div class="carousel-caption">
+          <h4>
+            <%= photo.title %>
+          </h4>
+          <p>
+            <%= photo.description %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <a id="left" data-slide="prev" href="#carousel-435758" class="left carousel-control">‹</a> <a id="right" data-slide="next" href="#carousel-435758" class="right carousel-control">›</a>
+</div>
 
+<script>
+    $(function(){
+        $('.carousel-indicators > li').first().addClass('active');
+        $('.item').first().addClass('active');
+    });
+</script>
