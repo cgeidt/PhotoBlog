@@ -10,16 +10,13 @@
       <tr>
         <div class="media">
           <th style="width:10%;">
-
-            <%= link_to image_tag(album.photos.first.image, {height: 64, width: 64, :class => 'media-object'}), album_path(album), {:class => 'pull-left'} %>
-
+            <%= link_to image_tag(album.photos.first.image,{height:64,width:64,:class=>'media-object'}),album_path(album),{:class=>'pull-left'} %>
           </th>
           <td style="width:75%;">
-                <div class="media-body">
-                  <h4 class="media-heading">
-                    <%= album.title %>
-                  </h4> <%= album.description.truncate(50) %>
-                </div>
+            <div class="media-body">
+              <h4 class="media-heading"><%= album.title %></h4>
+              <%= album.description.truncate(50) %>
+            </div>
           </td>
         </div>
         <td style="text-align: right; vertical-align: middle;">
