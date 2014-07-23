@@ -4,7 +4,7 @@
 
 <%= link_to t('btn_back'), album_path(@photo.album), class: 'btn btn-small btn-info' %>
 <%= link_to t('to_home'), welcome_index_path, class: 'btn btn-small btn-info' %>
-<%= link_to t('edit'), edit_album_photo_path(@album, @photo), class: 'btn btn-small btn-warning' %>
+<%= link_to t('edit'), edit_album_photo_path(@album, @photo), class: 'btn btn-small btn-warning', id: 'editLink' %>
 <br/>
 <br/>
 
@@ -12,7 +12,7 @@
   <ol class="carousel-indicators">
     <% @photos.each_with_index do |photo, index| %>
         <% active = (@photo.id == photo.id)? 'active' : '' %>
-        <li class="<%= active %>" >
+        <li class="<%= active %>" img_url="<%= edit_album_photo_path(photo.album, photo) %>" >
         </li>
     <% end %>
 
@@ -20,6 +20,7 @@
   <div class="carousel-inner">
     <% @photos.each do |photo| %>
         <% active = (@photo.id == photo.id)? 'active' : '' %>
+
         <div class="item <%= active %>">
           <%= image_tag(photo.image, {height:778, width:1170}) %>
           <div class="carousel-caption">
@@ -57,5 +58,25 @@
 <script>
     $(function() {
         $('.carousel').carousel('pause');
+        $('#right').click(function() {
+            if($('li.active').prev() == null){
+                var link = $('li.active').first().attr('img_url');
+            }else{
+                var link = $('li.active').next().attr('img_url');
+            }
+            $('#editLink').attr('href', link);
+        });
+
+        $('#left').click(function() {
+
+            if($('li.active').prev() == null){
+                var link = $('li.active').last().attr('img_url');
+            }else{
+                var link = $('li.active').prev().attr('img_url');
+            }
+
+
+            $('#editLink').attr('href', link);
+        });
     });
 </script>
