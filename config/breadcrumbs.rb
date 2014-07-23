@@ -1,10 +1,10 @@
 
 crumb :root do
-  link "Home", albums_index_path
+  link t('home'), welcome_index_path
 end
 
 crumb :albums do
-  link "Albums", albums_index_path
+  link t('albums'), albums_path
 end
 
 crumb :album do |album|

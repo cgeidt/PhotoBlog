@@ -1,5 +1,7 @@
 class PhotosController < ApplicationController
 
+  add_breadcrumb t('photo'), :photo
+
   def new
     @album = Album.find(params[:album_id])
     unless @album.user_id == current_user.id
