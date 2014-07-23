@@ -34,7 +34,7 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "defaults" %>
   </head>
   <body>
 
@@ -78,7 +78,7 @@
     <div class="container">
       <div class="row">
         <div class="span12">
-          <%= breadcrumbs pretext: t('location'), separator: " &rsaquo; " %>
+          <%= breadcrumbs pretext: t('location'), separator: " &rsaquo; ", style: :bootstrap, display_single_fragment: true %>
           <%= bootstrap_flash %>
           <% if notice %>
               <p class="alert alert-success"><%= notice %></p>
