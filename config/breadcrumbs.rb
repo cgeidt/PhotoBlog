@@ -14,7 +14,7 @@ end
 
 crumb :photo do |photo|
   link photo.title , album_photo_path(photo.album, photo)
-  parent :album, album_path(photo.album)
+  parent :album, photo.album
 end
 
 # If you want to split your breadcrumbs configuration over multiple files, you
