@@ -12,6 +12,10 @@ crumb :album do |album|
   parent :albums
 end
 
+crumb :photos do
+  link t('photos'), photos_path
+end
+
 crumb :photo do |photo|
   link photo.title , album_photo_path(photo.album, photo)
   parent :album, photo.album
