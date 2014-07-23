@@ -33,7 +33,8 @@
       </div>
     <% end %>
   </div>
-  <a id="left" data-slide="prev" href="#carousel-435758" class="left carousel-control">‹</a> <a id="right" data-slide="next" href="#carousel-435758" class="right carousel-control">›</a>
+  <a id="left" data-slide="prev" href="#carousel-435758" class="left carousel-control">‹</a>
+  <a id="right" data-slide="next" href="#carousel-435758" class="right carousel-control">›</a>
 </div>
 
 <script>
@@ -42,3 +43,13 @@
         $('.item').first().addClass('active');
     });
 </script>
+
+<p>
+  <br/>
+  <h3><%= t('overview') %></h3>
+  <p>
+    <% @photos.each do |photo| %>
+      <%= link_to image_tag(photo.image,:size=>'240x180',:border=> 0),album_photo_path(photo.album, photo) %>
+    <% end %>
+  </p>
+</p>
