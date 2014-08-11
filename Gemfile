@@ -23,9 +23,15 @@ gem 'imagemagick-binaries'
 # For user authentication
 gem 'devise'
 
+# For anynines
+gem 'rails_12factor'
+
+# For testing
+gem 'timecop'
+
 # For image modification
 gem 'mini_magick'
-gem "gretel"
+gem 'gretel'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
