@@ -25,6 +25,7 @@ gem 'devise'
 
 # For anynines
 gem 'rails_12factor'
+gem 'a9s'
 
 # For testing
 gem 'timecop'
