@@ -1,11 +1,127 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  url: MyString
-  title: MyString
-  description: MyString
+  image:  nil
+  image_file_name:  10001.jpg
+  image_content_type: image/jpeg
+  image_file_size:  406387
+  image_updated_at: 1408023383
+  title:  Bild1
+  description: Bild1 ist schön
+  album_id: 1
+  user_id: 1
+  private: true
+  created_at: 1408023383
+  updated_at: 1408023383
 
 two:
-  url: MyString
-  title: MyString
-  description: MyString
+  image:  nil
+  image_file_name:  10002.jpg
+  image_content_type: image/jpeg
+  image_file_size:  406387
+  image_updated_at: 1408023383
+  title:  Bild2
+  description: Bild2 ist schön
+  album_id: 1
+  user_id: 1
+  private: true
+  created_at: 1408023383
+  updated_at: 1408023383
+
+three:
+  image:  nil
+  image_file_name:  10003.jpg
+  image_content_type: image/jpeg
+  image_file_size:  406387
+  image_updated_at: 1408023383
+  title:  Bild3
+  description: Bild3 ist schön
+  album_id: 1
+  user_id: 1
+  private: true
+  created_at: 1408023383
+  updated_at: 1408023383
+
+four:
+  image:  nil
+  image_file_name:  10004.jpg
+  image_content_type: image/jpeg
+  image_file_size:  406387
+  image_updated_at: 1408023383
+  title:  Bild4
+  description: Bild4 ist schön
+  album_id: 2
+  user_id: 1
+  private: true
+  created_at: 1408023383
+  updated_at: 1408023383
+
+five:
+  image:  nil
+  image_file_name:  10001.jpg
+  image_content_type: image/jpeg
+  image_file_size:  406387
+  image_updated_at: 1408023383
+  title:  Bild5
+  description: Bild5 ist schön
+  album_id: 2
+  user_id: 1
+  private: true
+  created_at: 1408023383
+  updated_at: 1408023383
+
+six:
+  image:  nil
+  image_file_name:  10006.jpg
+  image_content_type: image/jpeg
+  image_file_size:  406387
+  image_updated_at: 1408023383
+  title:  Bild6
+  description: Bild6 ist schön
+  album_id: 2
+  user_id: 1
+  private: true
+  created_at: 1408023383
+  updated_at: 1408023383
+
+seven:
+  image:  nil
+  image_file_name:  10007.jpg
+  image_content_type: image/jpeg
+  image_file_size:  406387
+  image_updated_at: 1408023383
+  title:  Bild7
+  description: Bild7 ist schön
+  album_id: 3
+  user_id: 1
+  private: true
+  created_at: 1408023383
+  updated_at: 1408023383
+
+eight:
+  image:  nil
+  image_file_name:  10008.jpg
+  image_content_type: image/jpeg
+  image_file_size:  406387
+  image_updated_at: 1408023383
+  title:  Bild8
+  description: Bild8 ist schön
+  album_id: 3
+  user_id: 1
+  private: true
+  created_at: 1408023383
+  updated_at: 1408023383
+
+nine:
+  image:  nil
+  image_file_name:  10009.jpg
+  image_content_type: image/jpeg
+  image_file_size:  406387
+  image_updated_at: 1408023383
+  title:  Bild9
+  description: Bild9 ist schön
+  album_id: 3
+  user_id: 1
+  private: true
+  created_at: 1408023383
+  updated_at: 1408023383

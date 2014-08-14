@@ -4,7 +4,7 @@ class PhotoControllerTest < ActionController::TestCase
 
   # called before every single test
   def setup
-    @photo = photos.build
+    @photo = photos(:one)
   end
 
   # called after every single test
@@ -16,7 +16,7 @@ class PhotoControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    get :new
+    get(:new, {'id' => '1'}, {'current_user.id' => '1'})
     assert_response :success
   end
 
