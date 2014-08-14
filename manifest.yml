@@ -1,0 +1,6 @@
+---
+# manifest.yml
+applications:
+- name: photoblog
+  memory: 256M
+  instances: 2

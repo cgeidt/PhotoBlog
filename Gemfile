@@ -27,6 +27,8 @@ gem 'devise'
 # For anynines
 gem 'rails_12factor'
 gem 'a9s'
+gem 'rails_serve_static_assets'
+gem 'rails_stdout_logging'
 
 # For testing
 gem 'timecop'
