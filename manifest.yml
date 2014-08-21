@@ -4,3 +4,4 @@ applications:
 - name: photoblog
   memory: 256M
   instances: 2
+  buildpack: https://github.com/heroku/heroku-buildpack-ruby.git

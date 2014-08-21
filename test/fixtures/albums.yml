@@ -1,6 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+album_one:
   title: Album Eins
   description: Das erste Album
   user_id: 1
@@ -8,7 +8,7 @@ one:
   created_at: 2014-07-23 12:40:21.868979
   updated_at: 2014-07-23 12:40:21.868979
 
-two:
+album_two:
   title: Album Zwei
   description: Das zweite Album
   user_id: 2
@@ -16,7 +16,7 @@ two:
   created_at: 2014-07-23 12:40:21.868979
   updated_at: 2014-07-23 12:40:21.868979
 
-three:
+album_three:
   title: Album Drei
   description: Das dritte Album
   user_id: 1

@@ -4,7 +4,7 @@ class PhotoControllerTest < ActionController::TestCase
 
   # called before every single test
   def setup
-    @photo = photos.build
+    #@photo = Photos.build
   end
 
   # called after every single test
@@ -12,7 +12,7 @@ class PhotoControllerTest < ActionController::TestCase
     # as we are re-initializing @post before every test
     # setting it to nil here is not essential but I hope
     # you understand how you can use the teardown method
-    @photo = nil
+    #@photo = nil
   end
 
   test "should get new" do
