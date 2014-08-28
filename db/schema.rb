@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20140701130556) do
     t.string   "title"
     t.string   "description"
     t.integer  "user_id"
-    t.boolean  "private"
+    t.boolean  "private", default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20140701130556) do
     t.string   "description"
     t.integer  "album_id"
     t.integer  "user_id"
-    t.boolean  "private",            default: false, null: false
+    t.boolean  "private", default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
