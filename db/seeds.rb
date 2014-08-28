@@ -19,9 +19,9 @@ if ALBUMS
     {:id=>102,:title=>"Landschaftsbilder",:description=>"Schöne Bilder von überall",    :user_id=>101,:private=>false,:created_at=>Time.now,:updated_at=>Time.now},
     {:id=>103,:title=>"Handyfotos",       :description=>"Bilder vom Handy",             :user_id=>101,:private=>true ,:created_at=>Time.now,:updated_at=>Time.now},
 
-    {:id=>104,:title=>"Hintergrundbilder",:description=>"Hintergrundbilder für den PC", :user_id=>101,:private=>false,:created_at=>Time.now,:updated_at=>Time.now},
-    {:id=>105,:title=>"Herbst-Bilder",    :description=>"Bilder vom letzten Herbst",    :user_id=>101,:private=>false,:created_at=>Time.now,:updated_at=>Time.now},
-    {:id=>106,:title=>"Drei Tage am Meer",:description=>"Bilder vom Urlaub am Meer",    :user_id=>101,:private=>true ,:created_at=>Time.now,:updated_at=>Time.now}
+    {:id=>104,:title=>"Hintergrundbilder",:description=>"Hintergrundbilder für den PC", :user_id=>102,:private=>false,:created_at=>Time.now,:updated_at=>Time.now},
+    {:id=>105,:title=>"Herbst-Bilder",    :description=>"Bilder vom letzten Herbst",    :user_id=>102,:private=>false,:created_at=>Time.now,:updated_at=>Time.now},
+    {:id=>106,:title=>"Drei Tage am Meer",:description=>"Bilder vom Urlaub am Meer",    :user_id=>102,:private=>true ,:created_at=>Time.now,:updated_at=>Time.now}
   ])
 end
 

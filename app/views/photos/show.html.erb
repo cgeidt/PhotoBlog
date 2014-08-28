@@ -4,7 +4,12 @@
 
 <%= link_to t('btn_back'), album_path(@photo.album), class: 'btn btn-info' %>
 <%= link_to t('to_home'), welcome_index_path, class: 'btn btn-info' %>
-<%= link_to t('edit'), edit_album_photo_path(@album, @photo), class: 'btn btn-warning', id: 'editLink' %>
+
+<% if current_user != nil %>
+  <% if @photo.user_id == current_user.id  %>
+    <%= link_to t('edit'), edit_album_photo_path(@album, @photo), class: 'btn btn-warning', id: 'editLink' %>
+  <% end %>
+<% end %>
 <br/>
 <br/>
 
