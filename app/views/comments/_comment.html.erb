@@ -9,6 +9,10 @@
     </p>
   </p>
   <p>
-    <%= link_to t('delete_comment'),[comment.photo.album,comment.photo,comment],method: :delete,data: {confirm:'Are you sure?'} %>
+    <% if current_user != nil %>
+      <% if @photo.user_id == current_user.id  %>
+        <%= link_to t('delete_comment'),[comment.photo.album,comment.photo,comment],method: :delete,data: {confirm:'Are you sure?'} %>
+      <% end %>
+    <% end %>
   </p>
 </li>
