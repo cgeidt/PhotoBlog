@@ -11,7 +11,7 @@
         <div class="media">
           <th style="width:10%;">
 
-           <% if album.photos != nil %>
+           <% if album.photos.first %>
                 <% imgPath = album.photos.first.image %>
            <% else%>
                 <% imgPath = "/uploads/photos/std_image.png" %>
