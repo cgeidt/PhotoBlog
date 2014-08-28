@@ -1,7 +1,7 @@
 <div class="span4" style="margin-bottom:15px;">
   <div class="thumbnail">
 
-    <%= link_to image_tag(photo.image,:alt=>'320x240'),album_photo_path(photo.album, photo) %>
+    <%= link_to image_tag(photo.image,:alt=>'320x240'),album_photo_path(photo.album,photo) %>
     <div class="caption">
       <h3>
         <%= photo.title %>
@@ -17,9 +17,9 @@
       <% end %>
       </p>
       <p>
-        <%= link_to t('more'), album_photo_path(photo.album, photo) %>
+        <%= link_to t('more'),album_photo_path(photo.album,photo) %>
         <span style="float:right">
-          <%= link_to t('delete_photo'),[photo.album,photo],method: :delete,data:{confirm: t('confirm')} %>
+          <%= link_to t('delete_photo'),album_photo_path(photo.album,photo),method: :delete,data:{confirm: t('confirm')} %>
         </span>
       </p>
     </div>

@@ -17,7 +17,7 @@ class AlbumsController < ApplicationController
   def edit
     @album = Album.find(params[:id])
     unless @album.user_id == current_user.id
-      redirect_to album_path
+      redirect_to albums_path
     end
   end
 
@@ -32,7 +32,7 @@ class AlbumsController < ApplicationController
     @album = Album.find(params[:id])
     if owner(@album)
       @album.destroy
-      redirect_to album_path(@album)
+      redirect_to albums_path
     end
   end
 

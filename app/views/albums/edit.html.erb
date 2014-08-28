@@ -1,3 +1,4 @@
 <h2><%= t('edit_album') %></h2>
 <br/>
 <%= render partial: 'form' %>
+<%= link_to t('delete'),album_path(@album),class: 'btn  btn-danger',method: :delete,data:{confirm: t('confirm')} %>
