@@ -11,13 +11,13 @@
         <div class="media">
           <th style="width:10%;">
 
-           <% if album.photos.first %>
-                <% imgPath = album.photos.first.image %>
-           <% else%>
-                <% imgPath = "/uploads/photos/std_image.png" %>
-           <% end %>
+          <% if album.photos.first %>
+            <% imgPath = album.photos.first.image %>
+          <% else %>
+            <% imgPath = "/uploads/photos/std_image.png" %>
+          <% end %>
+          <%= link_to image_tag(imgPath,{height:64,width:64,:class=>'media-object'}),album_path(album),{:class=>'pull-left'} %>
 
-            <%= link_to image_tag(imgPath,{height:64,width:64,:class=>'media-object'}),album_path(album),{:class=>'pull-left'} %>
           </th>
           <td style="width:60%;">
             <div class="media-body">
@@ -28,7 +28,7 @@
         </div>
         <td style="text-align: right; vertical-align: middle;">
           <% if current_user != nil %>
-            <% if album.user_id == current_user.id  %>
+            <% if album.user_id == current_user.id %>
               <%= link_to t('edit'),edit_album_path(album),class: 'btn  btn-info' %>
               <%= link_to t('delete'),album_path(album),class: 'btn  btn-danger',method: :delete,data:{confirm: t('confirm')} %>
             <% end %>
