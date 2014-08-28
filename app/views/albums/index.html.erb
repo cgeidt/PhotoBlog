@@ -27,8 +27,8 @@
           </td>
         </div>
         <td style="text-align: right; vertical-align: middle;">
-          <%= link_to t('edit'), edit_album_path(album), class: 'btn  btn-info' %>
-          <%= link_to t('delete'), album_path(album), class: 'btn  btn-danger', method: :delete, confirm: t('confirm') %>
+          <%= link_to t('edit'),edit_album_path(album),class: 'btn  btn-info' %>
+          <%= link_to t('delete'),album_path(album),class: 'btn  btn-danger',method: :delete,data:{confirm: t('confirm')} %>
         </td>
       </tr>
   <% end %>
