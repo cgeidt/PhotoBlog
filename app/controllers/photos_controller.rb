@@ -54,6 +54,7 @@ class PhotosController < ApplicationController
     @photos = Photo.where(album_id: params[:album_id])
     @photo = Photo.find(params[:id])
     @album = Album.find(params[:album_id])
+    @user = User.find(@photo.user_id)
   end
 
 
