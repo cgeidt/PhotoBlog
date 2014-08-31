@@ -6,6 +6,9 @@
       <%= f.text_area :description %>
       <%= f.file_field :image %>
       <p>
+        <%= f.select :category_ids, @categories.map{|c| [c.name,c.id]}, {}, multiple: true %>
+      </p>
+      <p>
       <fieldset style="color:#2efd00;display:inline"><%= f.label :private,t('private'),:value=>true %><%= f.radio_button :private,true %></fieldset>
       <fieldset style="color:#fd7a00;display:inline"><%= f.label :private,t('public'),:value=>false %><%= f.radio_button :private,false %></fieldset>
       </p>
@@ -19,6 +22,9 @@
     <%= f.text_field :title %>
     <%= f.text_area :description %>
     <%= image_tag @photo.image.url,:size=>'320x240' %>
+    <p>
+      <%= f.select :category_ids, @categories.map{|c| [c.name,c.id]}, {}, multiple: true %>
+    </p>
     <p>
       <fieldset style="color:#2efd00;display:inline"><%= f.label :private,t('private'),:value=>true %><%= f.radio_button :private,true %></fieldset>
       <fieldset style="color:#fd7a00;display:inline"><%= f.label :private,t('public'),:value=>false %><%= f.radio_button :private,false %></fieldset>

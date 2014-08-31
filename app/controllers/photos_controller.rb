@@ -2,6 +2,7 @@ class PhotosController < ApplicationController
 
   def new
     @album = Album.find(params[:album_id])
+    @categories = Category.all
     unless @album.user_id == current_user.id
       redirect_to @album
     end
@@ -21,6 +22,7 @@ class PhotosController < ApplicationController
   def edit
     @album = Album.find(params[:album_id])
     @photo = Photo.find(params[:id])
+    @categories = Category.all
     unless @photo.user_id == current_user.id
       redirect_to album_photo_path
     end
@@ -75,6 +77,6 @@ class PhotosController < ApplicationController
   end
 
   def photo_params
-    params.require(:photo).permit(:image, :title, :description, :private)
+    params.require(:photo).permit(:image, :title, :description, :private, category_ids: [])
   end
 end
