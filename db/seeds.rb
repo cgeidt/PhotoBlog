@@ -11,6 +11,7 @@ ALBUMS = true
 PHOTOS = true
 COMMENTS = true
 USERS = true
+CATEGORIES = true
 
 
 if ALBUMS
@@ -83,8 +84,17 @@ end
 
 if USERS
   User.create!([
-    {:id=>101,:email=>'alexviern@web.de',:username=>'Alvi',:password=>'password',:reset_password_token=>nil,:reset_password_sent_at=>nil,:remember_created_at=>nil,:sign_in_count=>1,:current_sign_in_at=>Time.now,:last_sign_in_at=>Time.now,:current_sign_in_ip=>'127.0.0.1',:last_sign_in_ip=>'127.0.0.1',:confirmation_token=>nil,:confirmed_at=>nil,:confirmation_sent_at=>nil,:created_at=>Time.now,:updated_at=>Time.now},
-    {:id=>102,:email=>'fake@address.com',:username=>'Fake',:password=>'password',:reset_password_token=>nil,:reset_password_sent_at=>nil,:remember_created_at=>nil,:sign_in_count=>1,:current_sign_in_at=>Time.now,:last_sign_in_at=>Time.now,:current_sign_in_ip=>'127.0.0.1',:last_sign_in_ip=>'127.0.0.1',:confirmation_token=>nil,:confirmed_at=>nil,:confirmation_sent_at=>nil,:created_at=>Time.now,:updated_at=>Time.now}
+    {:id=>101,:email=>'alex@web.de'     ,:username=>'Alvi',:password=>'password',:reset_password_token=>nil,:reset_password_sent_at=>nil,:remember_created_at=>nil,:sign_in_count=>1,:current_sign_in_at=>Time.now,:last_sign_in_at=>Time.now,:current_sign_in_ip=>'127.0.0.1',:last_sign_in_ip=>'127.0.0.1',:confirmation_token=>nil,:confirmed_at=>Time.now,:confirmation_sent_at=>Time.now,:created_at=>Time.now,:updated_at=>Time.now},
+    {:id=>102,:email=>'fake@address.com',:username=>'Fake',:password=>'password',:reset_password_token=>nil,:reset_password_sent_at=>nil,:remember_created_at=>nil,:sign_in_count=>1,:current_sign_in_at=>Time.now,:last_sign_in_at=>Time.now,:current_sign_in_ip=>'127.0.0.1',:last_sign_in_ip=>'127.0.0.1',:confirmation_token=>nil,:confirmed_at=>Time.now,:confirmation_sent_at=>Time.now,:created_at=>Time.now,:updated_at=>Time.now}
+  ])
+end
+
+if CATEGORIES
+  Category.create!([
+    {:id=>101,:name=>'Urlaub'},
+    {:id=>102,:name=>'Natur' },
+    {:id=>103,:name=>'Handy' },
+    {:id=>104,:name=>'Nacht' }
   ])
 end
 

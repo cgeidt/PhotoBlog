@@ -29,6 +29,7 @@ en:
   btn_add_photo:        "+ Add new photo"
   btn_back:             "<= Back"
   cancel_acc:           "Cancel my account"
+  categories:           "Categories"
   change_my_pw:         "Change my password"
   change_pw:            "Change your password"
   comment:              "Comment"

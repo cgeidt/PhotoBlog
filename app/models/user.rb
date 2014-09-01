@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable,
          :rememberable,
          :trackable,
-         #:confirmable,
+         :confirmable,
          :validatable
   validates :email, presence: true
   validates :username, presence: true

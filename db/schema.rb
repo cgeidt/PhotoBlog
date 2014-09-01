@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 20140701130556) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "confirmation_token"
-    #t.string   "unconfirmed_email"
+    t.string   "unconfirmed_email"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.datetime "created_at"

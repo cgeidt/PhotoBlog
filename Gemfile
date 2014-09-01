@@ -35,6 +35,7 @@ gem 'timecop'
 
 # For image modification
 gem 'mini_magick'
+# Fro breadcrumbs
 gem 'gretel'
 
 # Use Uglifier as compressor for JavaScript assets
