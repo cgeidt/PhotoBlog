@@ -1,5 +1,7 @@
 class Pmailer < ActionMailer::Base
 
+  #photoblog.a9s@gmail.com
+
   default from: "photoblog.a9s@gmail.com"
 
   def welcome_email(user)
