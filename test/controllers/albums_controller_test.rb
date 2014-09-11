@@ -3,13 +3,14 @@ require File.dirname(__FILE__) + '/../../app/controllers/albums_controller'
 
 class AlbumsControllerTest < ActionController::TestCase
 
-  def setup
-    #@controller = AlbumsController.new
-    #@album = albums(:album_one)
+  setup do
+    @user = User.create(:email=>"dummy@net.com", :username=>"Paul", :id=>125)
+    sign_in @user
   end
 
-  def teardown
-    #@album = nil
+  test "should get index" do
+    get :index
+    assert_response :success
   end
 
   # test "should update album" do
@@ -18,10 +19,10 @@ class AlbumsControllerTest < ActionController::TestCase
   #   assert_redirected_to album_path(assigns(:album))
   # end
 
-  # test "should get new" do
-  #   get :new
-  #   assert_response :success
-  # end
+  test "should get new" do
+    get :new
+    assert_response :redirect
+  end
 
   # test "should get create" do
   #   post :create
@@ -48,5 +49,9 @@ class AlbumsControllerTest < ActionController::TestCase
   #   assert_response :success
   #   assert_not_nil assigns(:album)
   # end
+
+  teardown do
+    @user = nil
+  end
 
 end

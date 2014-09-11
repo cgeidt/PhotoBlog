@@ -1,5 +1,4 @@
 require 'test_helper'
-#require File.dirname(__FILE__) + '/../../app/controllers/welcome_controller'
 
 class WelcomeControllerTest < ActionController::TestCase
 
@@ -11,6 +10,10 @@ class WelcomeControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
+  end
+
+  teardown do
+    @user = nil
   end
 
 end
