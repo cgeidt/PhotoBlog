@@ -1,5 +1,4 @@
 require 'test_helper'
-require File.dirname(__FILE__) + '/../../app/models/album'
 
 class AlbumTest < ActiveSupport::TestCase
 
