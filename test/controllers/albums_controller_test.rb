@@ -1,6 +1,5 @@
 require 'test_helper'
-#require 'albums_controller'
-#require File.dirname(__FILE__) + '/../../app/controllers/albums_controller'
+require File.dirname(__FILE__) + '/../../app/controllers/albums_controller'
 
 class AlbumsControllerTest < ActionController::TestCase
 
@@ -12,6 +11,12 @@ class AlbumsControllerTest < ActionController::TestCase
   def teardown
     #@album = nil
   end
+
+  # test "should update album" do
+  #   album = Album.create(title: "Bilder", description: "bla", user_id: 101, private: false)
+  #   patch :update, id: album
+  #   assert_redirected_to album_path(assigns(:album))
+  # end
 
   # test "should get new" do
   #   get :new

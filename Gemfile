@@ -1,43 +1,34 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Gem for twitter-bootstrap
 gem 'bootstrap-sass', '~> 3.1.1'
-
 gem 'libv8', '3.16.14.3'
-
 # For twitter bootstrap
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
 gem 'sass-rails', '~> 4.0.3'
-
 # For file upload
 gem 'paperclip', '3.5.4' # 4.1.1 4.1.0 4.0.0 3.5.4 3.5.3
 gem 'cocaine', '0.5.4'
 gem 'carrierwave'
 gem 'imagemagick-binaries'
-
 # For user authentication
 gem 'devise'
-
 # For anynines
 gem 'rails_12factor'
 gem 'a9s'
 gem 'rails_serve_static_assets'
 gem 'rails_stdout_logging'
-
 # For testing
 gem 'timecop'
-
 # For image modification
 gem 'mini_magick'
 # Fro breadcrumbs
 gem 'gretel'
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -60,3 +51,4 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'debugger', group: [:development, :test]
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'rspec'

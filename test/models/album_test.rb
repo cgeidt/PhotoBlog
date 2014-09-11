@@ -1,13 +1,30 @@
 require 'test_helper'
+require File.dirname(__FILE__) + '/../../app/models/album'
 
 class AlbumTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
+
+  self.use_instantiated_fixtures = true
+
+  test "should not save album without title" do
+    album = Album.new
+    assert_not album.save
+  end
+
+  test "should save album" do
+    album = Album.new(:title => "Meine Bilder")
+    assert album.save
+  end
+
+  test "should not save same album title twice" do
+    album = Album.new(:title => "Doppeltes Album")
+    assert album.save
+    album = Album.new(:title => "Doppeltes Album")
+    assert_not album.save
+  end
+
+  # test "should not save album that exists" do
+  #   album = Album.new(:title => "Album Eins")
+  #   assert_not album.save
   # end
 
-  # test "should update album" do
-  #   album = Album.create(title: "Bilder", description: "bla", user_id: 101, private: false)
-  #   put :update, id: album
-  #   assert_redirected_to album_path(assigns(:album))
-  # end
 end
