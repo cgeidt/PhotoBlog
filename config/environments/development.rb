@@ -15,7 +15,7 @@ Rails.application.configure do
 
   # Send confirmation mails
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :letter_opener #:smtp
   config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
 
   # Don't care if the mailer can't send.
