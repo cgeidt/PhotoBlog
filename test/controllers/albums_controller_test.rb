@@ -25,10 +25,10 @@ test "should get index" do
     assert_response :redirect
   end
 
-  test "should create" do
-    post :create, :album => { :title => 'TestTitle', :description => 'TestDescr', :private => false }
-    assert_response :redirect
-  end
+  # test "should create" do
+  #   post :create, :album => { :title => 'TestTitle', :description => 'TestDescr', :private => false }
+  #   assert_response :redirect
+  # end
 
   # test "should get edit" do
   #   get :edit
