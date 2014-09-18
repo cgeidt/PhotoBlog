@@ -1,11 +1,26 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  commenter: MyString
-  body: MyText
-  photo_id: 
+  commenter: MyString1
+  body: MyText1
+  photo_id: 1
 
 two:
-  commenter: MyString
-  body: MyText
-  photo_id: 
+  commenter: MyString2
+  body: MyText2
+  photo_id: 2
+three:
+
+  commenter: MyString3
+  body: MyText3
+  photo_id: 3
+four:
+
+  commenter: MyString4
+  body: MyText4
+  photo_id: 4
+
+five:
+  commenter: MyString5
+  body: MyText5
+  photo_id: 5

@@ -1,14 +1,15 @@
 require 'test_helper'
-require File.dirname(__FILE__) + '/../../app/controllers/albums_controller'
-
 class AlbumsControllerTest < ActionController::TestCase
 
+
   setup do
-    @user = User.create(:email=>"dummy@net.com", :username=>"Paul", :id=>125)
+    @user = User.create(:email => "dummy@net.com", :username => "Paul")
+
     sign_in @user
+
   end
 
-  test "should get index" do
+test "should get index" do
     get :index
     assert_response :success
   end
@@ -24,10 +25,10 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_response :redirect
   end
 
-  # test "should get create" do
-  #   post :create
-  #   assert_response :success
-  # end
+  test "should create" do
+    post :create, :album => { :title => 'TestTitle', :description => 'TestDescr', :private => false }
+    assert_response :redirect
+  end
 
   # test "should get edit" do
   #   get :edit
@@ -51,7 +52,6 @@ class AlbumsControllerTest < ActionController::TestCase
   # end
 
   teardown do
-    @user = nil
   end
 
 end

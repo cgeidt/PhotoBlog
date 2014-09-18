@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  image:  nil
+  image:  TestImage
   image_file_name:  10001.jpg
   image_content_type: image/jpeg
   image_file_size:  406387
@@ -15,7 +15,7 @@ one:
   updated_at: 2014-07-23 12:40:21.868979
 
 two:
-  image:  nil
+  image:  TestImage
   image_file_name:  10002.jpg
   image_content_type: image/jpeg
   image_file_size:  406387
@@ -29,7 +29,7 @@ two:
   updated_at: 2014-07-23 12:40:21.868979
 
 three:
-  image:  nil
+  image:  TestImage
   image_file_name:  10003.jpg
   image_content_type: image/jpeg
   image_file_size:  406387
@@ -43,7 +43,7 @@ three:
   updated_at: 2014-07-23 12:40:21.868979
 
 four:
-  image:  nil
+  image:  TestImage
   image_file_name:  10004.jpg
   image_content_type: image/jpeg
   image_file_size:  406387
@@ -57,7 +57,7 @@ four:
   updated_at: 2014-07-23 12:40:21.868979
 
 five:
-  image:  nil
+  image:  TestImage
   image_file_name:  10001.jpg
   image_content_type: image/jpeg
   image_file_size:  406387
@@ -71,7 +71,7 @@ five:
   updated_at: 2014-07-23 12:40:21.868979
 
 six:
-  image:  nil
+  image:  TestImage
   image_file_name:  10006.jpg
   image_content_type: image/jpeg
   image_file_size:  406387
@@ -85,7 +85,7 @@ six:
   updated_at: 2014-07-23 12:40:21.868979
 
 seven:
-  image:  nil
+  image:  TestImage
   image_file_name:  10007.jpg
   image_content_type: image/jpeg
   image_file_size:  406387
@@ -98,27 +98,21 @@ seven:
   created_at: 2014-07-23 12:40:21.868979
   updated_at: 2014-07-23 12:40:21.868979
 
-eight:
-  image:  nil
-  image_file_name:  10008.jpg
-  image_content_type: image/jpeg
-  image_file_size:  406387
-  image_updated_at: 2014-07-23 12:40:21.868979
+no_image:
   title:  Bild8
-  description: Bild8 ist schön
   album_id: 3
   user_id: 1
   private: true
+  description: Bild8 ist schön
   created_at: 2014-07-23 12:40:21.868979
   updated_at: 2014-07-23 12:40:21.868979
 
-nine:
-  image:  nil
+no_title:
+  image:  TestImage
   image_file_name:  10009.jpg
   image_content_type: image/jpeg
   image_file_size:  406387
   image_updated_at: 2014-07-23 12:40:21.868979
-  title:  Bild9
   description: Bild9 ist schön
   album_id: 3
   user_id: 1
