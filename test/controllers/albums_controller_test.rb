@@ -1,22 +1,23 @@
 require 'test_helper'
+#require File.dirname(__FILE__) + '/../../app/controllers/albums_controller'
+
 class AlbumsControllerTest < ActionController::TestCase
 
 
   setup do
-    @user = User.create(:email => "dummy@net.com", :username => "Paul")
-
+    @user = User.create(:email=>"dummy@net.com", :username=>"Paul", :id=>125)
+    #@user = users(:user_one)
     sign_in @user
-
   end
 
-test "should get index" do
+  test "should get index" do
     get :index
     assert_response :success
   end
 
   # test "should update album" do
-  #   album = Album.create(title: "Bilder", description: "bla", user_id: 101, private: false)
-  #   patch :update, id: album
+  #   album = Album.create(id: 201, title: "Bilder", description: "bla", user_id: 101, private: false)
+  #   put :update, id: album.id
   #   assert_redirected_to album_path(assigns(:album))
   # end
 
@@ -52,6 +53,7 @@ test "should get index" do
   # end
 
   teardown do
+    @user = nil
   end
 
 end

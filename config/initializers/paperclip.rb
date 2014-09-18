@@ -27,28 +27,28 @@ def create_bucket_if_needed(swift_service)
   end
 end
 
-# if Rails.env.production?
-#   # parse the VCAP_SERVICES environment variable
-#   SERVICES = JSON.parse(ENV["VCAP_SERVICES"])
-#   swift_service = SERVICES["swift-1.0"].first
-#
-#   create_bucket_if_needed(swift_service)
-#
-#   # configure paperclip to use the credentials provided by the anynines environment
-#   Paperclip::Attachment.default_options.update({
-#       :path => ":class/:style/:filename", #:path => ":class/:id/:attachment/:style/img_:fingerprint",
-#       :storage => :fog,
-#       :fog_credentials => {
-#           :provider => 'HP',
-#           :hp_access_key => swift_service["credentials"]["user_name"],
-#           :hp_secret_key => swift_service["credentials"]["password"],
-#           :hp_tenant_id => swift_service["credentials"]["tenant_id"],
-#           :hp_auth_uri => swift_service["credentials"]["authentication_uri"],
-#           :hp_use_upass_auth_style => true,
-#           :hp_avl_zone => swift_service["credentials"]["availability_zone"]
-#       },
-#       :fog_directory => PAPERCLIP_BUCKET_NAME,
-#       :fog_public => true,
-#       :fog_host => "https://swift.hydranodes.de/v1/AUTH_#{swift_service["credentials"]["tenant_id"]}/#{PAPERCLIP_BUCKET_NAME}"
-#   })
-# end
+if Rails.env.production?
+  # parse the VCAP_SERVICES environment variable
+  SERVICES = JSON.parse(ENV["VCAP_SERVICES"])
+  swift_service = SERVICES["swift-1.0"].first
+
+  create_bucket_if_needed(swift_service)
+
+  # configure paperclip to use the credentials provided by the anynines environment
+  Paperclip::Attachment.default_options.update({
+      :path => ":class/:style/:filename", #:path => ":class/:id/:attachment/:style/img_:fingerprint",
+      :storage => :fog,
+      :fog_credentials => {
+          :provider => 'HP',
+          :hp_access_key => swift_service["credentials"]["user_name"],
+          :hp_secret_key => swift_service["credentials"]["password"],
+          :hp_tenant_id => swift_service["credentials"]["tenant_id"],
+          :hp_auth_uri => swift_service["credentials"]["authentication_uri"],
+          :hp_use_upass_auth_style => true,
+          :hp_avl_zone => swift_service["credentials"]["availability_zone"]
+      },
+      :fog_directory => PAPERCLIP_BUCKET_NAME,
+      :fog_public => true,
+      :fog_host => "https://swift.hydranodes.de/v1/AUTH_#{swift_service["credentials"]["tenant_id"]}/#{PAPERCLIP_BUCKET_NAME}"
+  })
+end

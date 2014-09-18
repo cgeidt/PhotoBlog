@@ -98,6 +98,7 @@ Devise.setup do |config|
 
   # Setup a pepper to generate the encrypted password.
   # config.pepper = '25e25f45b33c2e8585c902534e570f42dba8d0bc63c187d5e643205c0d5c3c372c1e66e783303b6d46dda9068bf24b83777698c6368c94360d245f66972ef0ef'
+  # config.allow_insecure_token_lookup = true
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without

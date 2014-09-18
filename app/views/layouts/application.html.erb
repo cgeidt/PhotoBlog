@@ -55,7 +55,12 @@
       <div class="row">
         <div class="span12">
           <%= breadcrumbs pretext: t('location'), separator: " &rsaquo; ", style: :bootstrap, display_single_fragment: true %>
-          
+          <% if notice %>
+            <p class="alert alert-success"><%= notice %></p>
+          <% end %>
+          <% if alert %>
+            <p class="alert alert-danger"><%= alert %></p>
+          <% end %>
           <%= yield %>
         </div>
       </div><!--/row-->
